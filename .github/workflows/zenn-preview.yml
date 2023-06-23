@@ -28,20 +28,28 @@ jobs:
 
       - name: 'Set up Cloud SDK'
         uses: 'google-github-actions/setup-gcloud@v0'
-
-      - name: 'Delete services from Cloud Run'
         run: |
-          gcloud run services list \
-          | sed 1d \
-          | awk '{print $2}' \
-          | xargs -n 1 -I{} gcloud run services delete {} --platform managed --region asia-northeast1 --quiet
-
-      - name: 'Delete images from Container Registry'
+          echo $ENV_1
+        env:
+          ENV_1: ${{ secrets.WORKLOAD_IDENTITY_PROVIDER }}
         run: |
-          gcloud container images list-tags "gcr.io/${{ secrets.PROJECT_ID }}/frontend-curriculum" \
-          | sed 1d \
-          | awk '{print $1}' \
-          | xargs -n 1 -I{} gcloud container images delete "gcr.io/${{ secrets.PROJECT_ID }}/frontend-curriculum@sha256:{}" --quiet --force-delete-tags
+          echo $ENV_2
+        env:
+          ENV_2: ${{ secrets.PROJECT_ID }}
+
+      # - name: 'Delete services from Cloud Run'
+      #   run: |
+      #     gcloud run services list \
+      #     | sed 1d \
+      #     | awk '{print $2}' \
+      #     | xargs -n 1 -I{} gcloud run services delete {} --platform managed --region asia-northeast1 --quiet
+
+      # - name: 'Delete images from Container Registry'
+      #   run: |
+      #     gcloud container images list-tags "gcr.io/${{ secrets.PROJECT_ID }}/frontend-curriculum" \
+      #     | sed 1d \
+      #     | awk '{print $1}' \
+      #     | xargs -n 1 -I{} gcloud container images delete "gcr.io/${{ secrets.PROJECT_ID }}/frontend-curriculum@sha256:{}" --quiet --force-delete-tags
 
       - name: 'Configure docker for gcloud'
         run: gcloud auth configure-docker
