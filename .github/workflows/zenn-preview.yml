@@ -1,0 +1,112 @@
+name: frontendCurriculum
+
+on:
+  pull_request:
+    branches: [ develop, main ]
+    types: [opened, synchronize, reopened, closed]
+
+  workflow_dispatch:
+
+jobs:
+  display-preview:
+    if: ${{ github.event.action != 'closed' }}
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: 'read'
+      id-token: 'write'
+      pull-requests: 'write'
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: 'Authenticate to Google Cloud'
+        uses: 'google-github-actions/auth@v0'
+        with:
+          workload_identity_provider: ${{ secrets.WORKLOAD_IDENTITY_PROVIDER }}
+          service_account: 'Fcurriculum-service-account@${{ secrets.PROJECT_ID }}.iam.gserviceaccount.com'
+
+      - name: 'Set up Cloud SDK'
+        uses: 'google-github-actions/setup-gcloud@v0'
+
+      - name: 'Delete services from Cloud Run'
+        run: |
+          gcloud run services list \
+          | sed 1d \
+          | awk '{print $2}' \
+          | xargs -n 1 -I{} gcloud run services delete {} --platform managed --region asia-northeast1 --quiet
+
+      - name: 'Delete images from Container Registry'
+        run: |
+          gcloud container images list-tags "gcr.io/${{ secrets.PROJECT_ID }}/frontend-curriculum" \
+          | sed 1d \
+          | awk '{print $1}' \
+          | xargs -n 1 -I{} gcloud container images delete "gcr.io/${{ secrets.PROJECT_ID }}/frontend-curriculum@sha256:{}" --quiet --force-delete-tags
+
+      - name: 'Configure docker for gcloud'
+        run: gcloud auth configure-docker
+
+      - name: 'Build image'
+        run: docker build -t "gcr.io/${{ secrets.PROJECT_ID }}/frontend-curriculum" .
+
+      - name: 'Push image'
+        run: docker push "gcr.io/${{ secrets.PROJECT_ID }}/frontend-curriculum"
+
+      - id: create_service_name
+        name: 'Create service name'
+        run: |
+          SERVICE_NAME="frontend-curriculum-$(date +%Y%m%d%H%M%S)"
+          echo "::set-output name=SERVICE_NAME::${SERVICE_NAME}"
+
+      - id: deploy
+        name: 'Deploy to Cloud Run'
+        uses: 'google-github-actions/deploy-cloudrun@v0'
+        with:
+          service: "${{ steps.create_service_name.outputs.SERVICE_NAME }}"
+          image: "gcr.io/${{ secrets.PROJECT_ID }}/frontend-curriculum"
+          region: 'asia-northeast1'
+          flags: --allow-unauthenticated --port=8000
+
+      - name: 'Post comments'
+        uses: actions/github-script@v5
+        with:
+          script: |
+            var preview_url_message = `Preview URL: ${{ steps.deploy.outputs.url }}\n`
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: preview_url_message
+            })
+
+  close-preview:
+    if: ${{ github.event.action == 'closed' }}
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: 'read'
+      id-token: 'write'
+
+    steps:
+      - name: 'Authenticate to Google Cloud'
+        uses: 'google-github-actions/auth@v0'
+        with:
+          workload_identity_provider: ${{ secrets.WORKLOAD_IDENTITY_PROVIDER }}
+          service_account: 'Fcurriculum-service-account@${{ secrets.PROJECT_ID }}.iam.gserviceaccount.com'
+
+      - name: 'Set up Cloud SDK'
+        uses: 'google-github-actions/setup-gcloud@v0'
+
+      - name: 'Delete services from Cloud Run'
+        run: |
+          gcloud run services list \
+          | sed 1d \
+          | awk '{print $2}' \
+          | xargs -n 1 -I{} gcloud run services delete {} --platform managed --region asia-northeast1 --quiet
+
+      - name: 'Delete images from Container Registry'
+        run: |
+          gcloud container images list-tags "gcr.io/${{ secrets.PROJECT_ID }}/frontend-curriculum" \
+          | sed 1d \
+          | awk '{print $1}' \
+          | xargs -n 1 -I{} gcloud container images delete "gcr.io/${{ secrets.PROJECT_ID }}/frontend-curriculum@sha256:{}" --quiet --force-delete-tags
