@@ -338,12 +338,6 @@ let filePath = "user/document/excel/社員総会出席者リスト.xlsx";
 console.log(fileName);
 ```
 
-#### 【JS_3-5】 次の文字列のうち、大文字を含む単語を\*に変換して出力してください
-
-```javascript
-const text = "I love Japan, especially Kiyomizu Temple in Kyoto.";
-```
-
 ---
 
 # 4.配列操作
@@ -1834,8 +1828,6 @@ alternate-reverse→ 毎回逆方向の再生、奇数回では逆方向、偶�
 
 #### 【CSS_13-1】 以下のテキストボタンを実装してください。
 
-※hover 時にアニメーションが発火するようにしてください
-
 ![](https://storage.googleapis.com/zenn-user-upload/f24c74ff4800-20220310.gif)
 
 :::details html ファイル
@@ -1863,8 +1855,6 @@ alternate-reverse→ 毎回逆方向の再生、奇数回では逆方向、偶�
 :::
 
 #### 【CSS_13-2】 以下のツールチップを実装してください。
-
-※hover 時にアニメーションが発火するようにしてください
 
 ![](https://storage.googleapis.com/zenn-user-upload/3a51077e49b2-20220310.gif)
 
@@ -1924,8 +1914,6 @@ alternate-reverse→ 毎回逆方向の再生、奇数回では逆方向、偶�
 
 #### 【CSS_13-4】 以下の SNS アイコンを実装してください。
 
-※各アイコンの背景色にある模様なものは再現しなくて問題ありません。
-
 ![](https://storage.googleapis.com/zenn-user-upload/daedd5d53c20-20220310.gif)
 
 :::details html ファイル
@@ -1969,5 +1957,5 @@ alternate-reverse→ 毎回逆方向の再生、奇数回では逆方向、偶�
 
 :::
 
-以上で JavaScript(CSS アニメーション含む)のセクションは終了です！
+以上で JavaScript(CSS アニメーション含む）のセクションは終了です！
 お疲れ様でした！
