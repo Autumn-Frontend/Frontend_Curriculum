@@ -270,6 +270,40 @@ const result = words.join("");
 console.log(result); //redyellowbluegreenと出力される。
 ```
 
+## 正規表現
+
+正規表現とはテキストの中から特定のパターンや条件に合致する文字列を検索や抽出することができるものです。
+
+パスワードを登録するときに「半角英数字を含む〇文字以上で入力してください」といった文言を見たことがあると思います。
+これに使用されているのが正規表現です。
+
+JavaScript で正規表現を扱う際は RegExp を用いるか/で囲う必要があります。
+
+```javascript
+//リテラル記法
+const regexp = /[A-Z][a-zA-Z]/;
+
+//RegExpコントラクタ
+const regexp = new RegExp([A - Z][a - zA - Z]);
+
+// 正規表現を適用させる文字列
+const target =
+  "JavaScript and React are different. TypeScript is a great language.";
+
+const regex = /[A-Z][a-zA-Z]+/g;
+// matchメソッドを用いることで、文字列中から正規表現にマッチする文字列を取得できます。
+console.log(target.match(regex)); // => [ 'JavaScript', 'React', 'TypeScript' ]
+```
+
+[A-Z]：最初の文字がアルファベットの大文字である
+
+[a-zA-Z]+：小文字と大文字のアルファベットを含む。＋は 1 回以上の繰り返しを示す
+
+/g：条件にマッチするすべてのパターンを検索する
+→ 上記の正規表現はアルファベットの大文字で始まり、そのあとに小文字化大文字のアルファベットが 1 つ以上続く文字列を示しています。
+正規表現の詳しい文法についてはこちらを参照してください
+[正規表現とは](https://www.tohoho-web.com/ex/regexp.html)
+
 ## 課題
 
 #### 【JS_3-1】 以下のように、改行を含めた文字をコンソールに出力してください。
@@ -302,6 +336,12 @@ let filePath = "user/document/excel/社員総会出席者リスト.xlsx";
 
 // 最終的な出力
 console.log(fileName);
+```
+
+#### 【JS_3-5】 次の文字列のうち、大文字を含む単語を\*に変換して出力してください
+
+```javascript
+const text = "I love Japan, especially Kiyomizu Temple in Kyoto.";
 ```
 
 ---
@@ -1102,16 +1142,6 @@ var hachi = new Dog("ハチ", 5); // ハチというイヌ
 taro.self_introduction.bind(hachi)();
 ```
 
-#### 【JS_9-3】 以下の条件の関数を作成して、呼び出してください。
-
-##### (条件）
-
-int の引数を 10 個受け取り、以下の処理を行う関数。
-なお、引数 10 個は呼び出し時配列として受け取ること。
-計算式 = （引数１ + 引数 2 + 引数 3) _ (引数 4 + 引数 5) / 引数 6 _ 引数 7 - (引数 8 + 引数 9 - 引数 10)
-
-#### 【JS_9-4】 上記問題３では、全て配列で受け取るよう指示をしましたが、この問題では全て 1 個ずつ引数として受け取り、出力してください。
-
 ---
 
 # 10.クラス
@@ -1794,6 +1824,8 @@ alternate-reverse→ 毎回逆方向の再生、奇数回では逆方向、偶�
 
 #### 【CSS_13-1】 以下のテキストボタンを実装してください。
 
+※hover 時にアニメーションが発火するようにしてください
+
 ![](https://storage.googleapis.com/zenn-user-upload/f24c74ff4800-20220310.gif)
 
 :::details html ファイル
@@ -1821,6 +1853,8 @@ alternate-reverse→ 毎回逆方向の再生、奇数回では逆方向、偶�
 :::
 
 #### 【CSS_13-2】 以下のツールチップを実装してください。
+
+※hover 時にアニメーションが発火するようにしてください
 
 ![](https://storage.googleapis.com/zenn-user-upload/3a51077e49b2-20220310.gif)
 
@@ -1880,6 +1914,8 @@ alternate-reverse→ 毎回逆方向の再生、奇数回では逆方向、偶�
 
 #### 【CSS_13-4】 以下の SNS アイコンを実装してください。
 
+※各アイコンの背景色にある模様なものは再現しなくて問題ありません。
+
 ![](https://storage.googleapis.com/zenn-user-upload/daedd5d53c20-20220310.gif)
 
 :::details html ファイル
@@ -1923,5 +1959,5 @@ alternate-reverse→ 毎回逆方向の再生、奇数回では逆方向、偶�
 
 :::
 
-以上で JavaScript(CSS アニメーション含む）のセクションは終了です！
+以上で JavaScript(CSS アニメーション含む)のセクションは終了です！
 お疲れ様でした！
