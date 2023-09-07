@@ -882,7 +882,13 @@ console.log(getProfile({ name: "たかし", age: 20 }));
 - 引数に messageId を指定したら ID に対応するメッセージが出力させる。
 - メッセージの出力形式(type)は、alert, confirm, console.log それぞれ引数で選択することとする。
 - 引数の順番が入れ替わっても良いような対応をする。
--
+
+<details>
+<summary>ヒント</summary>
+・関数実行時に渡される引数名を messageId とし、MSG00001~5 を受け取った際に対応するメッセージが出力されるようにしてください。</br>
+・関数実行時にalert, confirm, console.logをのいずれかを渡し、messageIdとは別にtypeという引数を受け取れるようにしてください。
+</details>
+<br>
 
 // メッセージリスト
 
