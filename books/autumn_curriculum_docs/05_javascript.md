@@ -270,6 +270,40 @@ const result = words.join("");
 console.log(result); //redyellowbluegreenと出力される。
 ```
 
+## 正規表現
+
+正規表現とはテキストの中から特定のパターンや条件に合致する文字列を検索や抽出することができるものです。
+
+パスワードを登録するときに「半角英数字を含む〇文字以上で入力してください」といった文言を見たことがあると思います。
+これに使用されているのが正規表現です。
+
+JavaScript で正規表現を扱う際は RegExp を用いるか/で囲う必要があります。
+
+```javascript
+//リテラル記法
+const regexp = /[A-Z][a-zA-Z]/;
+
+//RegExpコントラクタ
+const regexp = new RegExp([A - Z][a - zA - Z]);
+
+// 正規表現を適用させる文字列
+const target =
+  "JavaScript and React are different. TypeScript is a great language.";
+
+const regex = /[A-Z][a-zA-Z]+/g;
+// matchメソッドを用いることで、文字列中から正規表現にマッチする文字列を取得できます。
+console.log(target.match(regex)); // => [ 'JavaScript', 'React', 'TypeScript' ]
+```
+
+[A-Z]：最初の文字がアルファベットの大文字である
+
+[a-zA-Z]+：小文字と大文字のアルファベットを含む。＋は 1 回以上の繰り返しを示す
+
+/g：条件にマッチするすべてのパターンを検索する
+→ 上記の正規表現はアルファベットの大文字で始まり、そのあとに小文字化大文字のアルファベットが 1 つ以上続く文字列を示しています。
+正規表現の詳しい文法についてはこちらを参照してください
+[正規表現とは](https://www.tohoho-web.com/ex/regexp.html)
+
 ## 課題
 
 #### 【JS_3-1】 以下のように、改行を含めた文字をコンソールに出力してください。
