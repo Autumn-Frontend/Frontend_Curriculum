@@ -1296,6 +1296,8 @@ https://www.fenet.jp/dotnet/column/language/6526/
 
 #### 【JS_12-1】 以下のモーダル画面を実装してください。
 
+※Close ボタンもしくはモーダルの外側をクリックした際に、モーダルが閉じるようにしてください
+
 ![](https://storage.googleapis.com/zenn-user-upload/a66085224f24-20220310.gif)
 :::details html ファイル
 
