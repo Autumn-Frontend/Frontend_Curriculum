@@ -42,21 +42,3 @@ html, css の基礎学習として、div パズルという課題に取り組ん
 #### 【HTML/CSS_1-3】 div パズル 3
 
 ![](https://storage.googleapis.com/zenn-user-upload/7e08ef9eafd2-20220308.png)
-
-### 使用タグ・プロパティ（1-1 ~ 1-3)
-
-#### HTML
-
-div
-
-#### CSS
-
-width
-height
-display
-flex
-justify-content
-align-items
-box-shadow
-border-radius
-background-color
