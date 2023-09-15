@@ -128,39 +128,17 @@ https://ninjacode.work/course/SASS
 
 ## 環境構築
 
-### 1.gulp のインストール
+### Live Sass Compilerの導入
 
-gulp というタスクランナーをインストールし、簡単に Sass 環境を構築します。
+VS Codeの拡張機能の一つで、SCSSファイルをコンパイルしCSSファイルを出力してくれる、とても便利なプラグインです。
 
-```
-$ npm install gulp --save-dev
-```
+（ダウンロードページ）
+https://marketplace.visualstudio.com/items?itemName=ritwickdey.live-sass
 
-### 2.gulpsass のインストール
+設定がうまくいかない場合は、以下の公式ドキュメントを見るか、**「live sass compiler 設定」** と検索すると詳しく解説してくれている記事がありますので、そちらを参考にしてみてください。
 
-```
-$ npm install gulp-sass --save-dev
-```
-
-### 3.gulpfile.js の作成
-
-```JavaScript:gulpfile.js
-$ touch gulpfile.js
-```
-
-### 4.gulpfile.js の編集
-
-```JavaScript:gulpfile.js
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-
-gulp.task('sass', function() {
-  return gulp
-    .src('./sass/**/*.scss')
-    .pipe(sass({outputStyle: 'expanded'}))
-    .pipe(gulp.dest('./css'));
-});
-```
+（公式ドキュメント）
+https://github.com/ritwickdey/vscode-live-sass-compiler/blob/master/docs/settings.md
 
 ## 課題
 
