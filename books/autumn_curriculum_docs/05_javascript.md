@@ -166,6 +166,7 @@ let userData = {};
 ```
 
 （条件）
+
 - ドット記法とブラケット記法それぞれで書くこと
 
 ---
@@ -178,24 +179,24 @@ let userData = {};
 
 ### 算術演算子
 
-| 演算子 | 説明         | 例                            |
-| ------ | ------------ | ----------------------------- |
-| +     | 加算演算子   | a + b 　　 a に b を足す     |
-| -     | 減算演算子   | a - b 　　 a から b を引く   |
-| *     | 乗算演算子   | a * b 　　 a と b をかける     |
-| /      | 除算演算子   | a / b 　　 a を b で割る        |
-| %     | 剰余算演算子 | a % b 　　 a を B で割った余り |
+| 演算子 | 説明         | 例                             |
+| ------ | ------------ | ------------------------------ |
+| +      | 加算演算子   | a + b 　　 a に b を足す       |
+| -      | 減算演算子   | a - b 　　 a から b を引く     |
+| \*     | 乗算演算子   | a \* b 　　 a と b をかける    |
+| /      | 除算演算子   | a / b 　　 a を b で割る       |
+| %      | 剰余算演算子 | a % b 　　 a を B で割った余り |
 
 ### 代入演算子
 
-| 演算子 | 使用例                                         |
-| ------ | ---------------------------------------------- |
-| =     | a = b 　　 a に b を代入する                  |
-| +=   | a += b 　　 a に b を足して、a に代入する    |
-| -=   | a -= b 　　 a から b を引いて、a に代入する  |
-| *=   | a *= b 　　 a に b を掛けて、a に代入する     |
-| /=    | a /= b 　　 a を b で割って、a に代入する      |
-| %=   | a %= b 　　 a を b で割った余りを、a に代入する |
+| 演算子 | 使用例                                          |
+| ------ | ----------------------------------------------- |
+| =      | a = b 　　 a に b を代入する                    |
+| +=     | a += b 　　 a に b を足して、a に代入する       |
+| -=     | a -= b 　　 a から b を引いて、a に代入する     |
+| \*=    | a \*= b 　　 a に b を掛けて、a に代入する      |
+| /=     | a /= b 　　 a を b で割って、a に代入する       |
+| %=     | a %= b 　　 a を b で割った余りを、a に代入する |
 
 ### 理論演算子
 
@@ -577,8 +578,8 @@ console.log("person:", person);
 ## 配列メソッド
 
 配列には多くのメソッドがあります。上記で記載した分割代入やスプレッド構文なども現場では頻繁に使われますが、最も多く登場するのはこの配列メソッドです。
-その中でも特によく使う3つのメソッドを紹介します。
-この他にも重要なメソッドは多く存在しますが、ここには載せきれないくらい多いため、勉強したい方は下記のURLを参考にしてください。
+その中でも特によく使う 3 つのメソッドを紹介します。
+この他にも重要なメソッドは多く存在しますが、ここには載せきれないくらい多いため、勉強したい方は下記の URL を参考にしてください。
 
 https://ja.javascript.info/array-methods
 
@@ -588,23 +589,23 @@ https://ja.javascript.info/array-methods
 
 #### 使用例
 
-以下は、arrayという数字が格納された配列に対し、`map()`メソッドを用いた例です。<br>
-まず、mapの引数にはコールバック関数を入れます。（`(v, index) => v * 2`）<br>
+以下は、array という数字が格納された配列に対し、`map()`メソッドを用いた例です。<br>
+まず、map の引数にはコールバック関数を入れます。（`(v, index) => v * 2`）<br>
 このコールバック関数の内容で、どのように配列を処理するかを指定します。<br>
 コールバック関数の第一引数（`v`）には、配列の要素が順番に格納されていきます。<br>
 第二引数(`index`)は、現在のインデックス番号が入ります。<br>
-resultではarrayに入っている値を2倍した値を格納した新しい配列が生成され、result2では、array2のインデックス（array2の要素数は２なので、0, 1という順番でインデックス番号が振られていく）を10で掛けた値が格納されています。
+result では array に入っている値を 2 倍した値を格納した新しい配列が生成され、result2 では、array2 のインデックス（array2 の要素数は２なので、0, 1 という順番でインデックス番号が振られていく）を 10 で掛けた値が格納されています。
 
 ```javascript
 const array = [1, 4, 9, 16];
-const array2 = ['Taro', 'Jiro']
+const array2 = ["Taro", "Jiro"];
 
-const result = array.map((v, index) => v * 2)
-const result2 = array2.map((_, index) => index * 10)
+const result = array.map((v, index) => v * 2);
+const result2 = array2.map((_, index) => index * 10);
 
-console.log(result)
+console.log(result);
 // 出力結果 [2, 8, 18, 32]
-console.log(result2)
+console.log(result2);
 // 出力結果 [0, 10]
 ```
 
@@ -614,13 +615,20 @@ console.log(result2)
 
 #### 使用例
 
-以下は、wordsという文字列が格納された配列に対し、`filter()`メソッドを用いた例です。<br>
+以下は、words という文字列が格納された配列に対し、`filter()`メソッドを用いた例です。<br>
 引数にコールバック関数を用いる点や、コールバック関数の引数については`map()`メソッドと同じです。<br>
-このコールバック関数で行なっていることは、wordに入る配列の要素が6文字以上であるかをテストしています。<br>
-そして、テストをクリアした値だけresultという新しい配列に格納されています。
+このコールバック関数で行なっていることは、word に入る配列の要素が 6 文字以上であるかをテストしています。<br>
+そして、テストをクリアした値だけ result という新しい配列に格納されています。
 
-``` javascript
-const words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
+```javascript
+const words = [
+  "spray",
+  "limit",
+  "elite",
+  "exuberant",
+  "destruction",
+  "present",
+];
 
 const result = words.filter((word) => word.length > 6);
 
@@ -638,13 +646,14 @@ console.log(result);
 
 以下は、`reduce()`メソッドの構文です。<br>
 簡単に引数の役割を説明します。<br>
+
 - `accumulator` – 前の関数呼び出しの結果で、初回は initial と等価です（initial が指定されている場合）
 - `item` – 現在の配列の要素です。
 - `index` – 現在の配列のインデックスです。
 - `arr` – `reduce()`メソッドを使用している配列です。（使用頻度は少ないです）
 
-``` javascript
-const value = arr.reduce(function(accumulator, item, index, arr) {
+```javascript
+const value = arr.reduce(function (accumulator, item, index, arr) {
   // ...
 }, initial);
 ```
@@ -652,14 +661,15 @@ const value = arr.reduce(function(accumulator, item, index, arr) {
 #### 使用例
 
 以下は１行で配列の合計を取得する例です。<br>
-2つの引数だけを使用する`reduce()`の最も一般的なパターンです。<br>
+2 つの引数だけを使用する`reduce()`の最も一般的なパターンです。<br>
 処理の流れの詳細を見ていきましょう。<br>
-1. 最初の実行で sum は initial 値(reduce の最後の引数)であり、 0 です。そして、current は最初の配列要素で 1 になります。従って、結果は 1 です。
-2. ２回目の実行では、sum = 1 で、2つ目の配列要素(2)をそれに足して返します。
-3. ３回目の実行では、sum = 3 で、それに１つ要素を足します。それが続きます。
-4. これらを続けた結果がresultに格納され、15という配列の合計値が出力されます。
 
-``` javascript
+1. 最初の実行で sum は initial 値(reduce の最後の引数)であり、 0 です。そして、current は最初の配列要素で 1 になります。従って、結果は 1 です。
+2. ２回目の実行では、sum = 1 で、2 つ目の配列要素(2)をそれに足して返します。
+3. ３回目の実行では、sum = 3 で、それに１つ要素を足します。それが続きます。
+4. これらを続けた結果が result に格納され、15 という配列の合計値が出力されます。
+
+```javascript
 const arr = [1, 2, 3, 4, 5];
 
 const result = arr.reduce((sum, current) => sum + current, 0);
@@ -714,7 +724,7 @@ const userData = {
 // 私の名前は大槻、現在24歳！趣味は人間観察です。
 ```
 
-### JS_4-4, JS_4-5については、「スプレッド構文」を用いて課題に取り組みましょう。
+### JS_4-4, JS_4-5 については、「スプレッド構文」を用いて課題に取り組みましょう。
 
 #### 【JS_4-4】 スプレッド構文を用いて 1 つの配列を 3 つの配列に分けてください。 </br> ※ 出力を複数回に分けて構いません。
 
@@ -729,7 +739,7 @@ let array1 = ['こんにちは','おはよう','さようなら'];
 let array2 = ['ヤッホー','わーい','バイバイ'];
 ```
 
-#### 【JS_4-6】 分割代入とmapを用いて、usersをコメントアウトのような形になるように加工し、resultという変数に格納し、出力してください。
+#### 【JS_4-6】 分割代入と map を用いて、users をコメントアウトのような形になるように加工し、result という変数に格納し、出力してください。
 
 ```javascript
 const users = [
@@ -778,7 +788,7 @@ const result
 // ]
 ```
 
-#### 【JS_4-7】 分割代入とfilterを用いて、itemsの中からpriceが500以上のものだけを取り出し、resultという変数に格納し、出力してください。
+#### 【JS_4-7】 分割代入と filter を用いて、items の中から price が 500 以上のものだけを取り出し、result という変数に格納し、出力してください。
 
 ```javascript
 const items = [
@@ -807,7 +817,7 @@ const items = [
 const result
 ```
 
-#### 【JS_4-8】 分割代入とreduceを用いて、itemsという配列に格納されたpriceの合計値を求めてresultという変数に格納し、出力してください。
+#### 【JS_4-8】 分割代入と reduce を用いて、items という配列に格納された price の合計値を求めて result という変数に格納し、出力してください。
 
 ```javascript
 const items = [
@@ -826,6 +836,36 @@ const items = [
 ]
 
 const result
+```
+
+#### 【JS_4-9】以下の多次元配列の各配列内で 20 以上の数値を 1 つだけ取得し、新しい配列 result に格納してください
+
+```javascript
+const data = [
+  [10, 23, 38],
+  [45, 59, 26],
+  [4, 18, 39],
+];
+
+const result = data.map((subArray) => subArray.find((num) => num >= 20));
+console.log(result); // [23, 45, 39]
+```
+
+#### 【JS_4-10】下記 grade の連想配列から英語の点数だけの配列を作成し、点数を 2 倍にしてください。
+
+```javascript
+const grade = [
+  { name: "佐藤", subject: "math", score: 78 },
+  { name: "高橋", subject: "English", score: 84 },
+  { name: "鈴木", subject: "English", score: 90 },
+  { name: "田中", subject: "English", score: 62 },
+  { name: "山本", subject: "math", score: 54 },
+  { name: "加藤", subject: "math", score: 88 },
+  { name: "中村", subject: "English", score: 68 },
+];
+const result = 処理;
+
+console.log(result); //[168, 180, 124, 136]
 ```
 
 ---
