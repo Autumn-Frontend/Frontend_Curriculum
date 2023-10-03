@@ -847,7 +847,6 @@ const data = [
   [4, 18, 39],
 ];
 
-const result = data.map((subArray) => subArray.find((num) => num >= 20));
 console.log(result); // [23, 45, 39]
 ```
 
