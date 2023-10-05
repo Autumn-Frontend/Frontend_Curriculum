@@ -1505,7 +1505,7 @@ box1.classList.add('mainBox');
 https://zenn.dev/ryofrontenginer/articles/edfce254795efc
 https://www.fenet.jp/dotnet/column/language/6526/
 
-![](https://storage.googleapis.com/zenn-user-upload/989aad314925-20220309.png)
+![](https://github.com/Autumn-Frontend/Frontend_Curriculum/blob/main/image/05_JavaScript/989aad314925-20220309.png?raw=true)
 
 ## 課題
 
@@ -1528,7 +1528,7 @@ https://www.fenet.jp/dotnet/column/language/6526/
 
 ※Close ボタンもしくはモーダルの外側をクリックした際に、モーダルが閉じるようにしてください
 
-![](https://storage.googleapis.com/zenn-user-upload/a66085224f24-20220310.gif)
+![](https://github.com/Autumn-Frontend/Frontend_Curriculum/blob/main/image/05_JavaScript/a66085224f24-20220310.gif?raw=true)
 :::details html ファイル
 
 ```html:index.html
@@ -1653,7 +1653,7 @@ https://www.fenet.jp/dotnet/column/language/6526/
 
 #### 【JS_12-2】 以下のサイズ変換機能を実装してください。
 
-![](https://storage.googleapis.com/zenn-user-upload/2d286e27e2d0-20220310.gif)
+![](https://github.com/Autumn-Frontend/Frontend_Curriculum/blob/main/image/05_JavaScript/2d286e27e2d0-20220310.gif?raw=true)
 
 :::details html ファイル
 
@@ -1698,7 +1698,7 @@ https://www.fenet.jp/dotnet/column/language/6526/
 
 #### 【JS_12-3】 以下のハンバーガーメニューを実装してください。
 
-![](https://storage.googleapis.com/zenn-user-upload/9aaa919e7359-20220310.gif)
+![](https://github.com/Autumn-Frontend/Frontend_Curriculum/blob/main/image/05_JavaScript/9aaa919e7359-20220310.gif?raw=true)
 
 :::details html ファイル
 
@@ -1882,7 +1882,7 @@ alternate-reverse→ 毎回逆方向の再生、奇数回では逆方向、偶�
 
 #### 【CSS_13-1】 以下のテキストボタンを実装してください。
 
-![](https://storage.googleapis.com/zenn-user-upload/f24c74ff4800-20220310.gif)
+![](https://github.com/Autumn-Frontend/Frontend_Curriculum/blob/main/image/05_JavaScript/f24c74ff4800-20220310.gif?raw=true)
 
 :::details html ファイル
 
@@ -1910,7 +1910,7 @@ alternate-reverse→ 毎回逆方向の再生、奇数回では逆方向、偶�
 
 #### 【CSS_13-2】 以下のツールチップを実装してください。
 
-![](https://storage.googleapis.com/zenn-user-upload/3a51077e49b2-20220310.gif)
+![](https://github.com/Autumn-Frontend/Frontend_Curriculum/blob/main/image/05_JavaScript/3a51077e49b2-20220310.gif?raw=true)
 
 :::details html ファイル
 
@@ -1940,7 +1940,7 @@ alternate-reverse→ 毎回逆方向の再生、奇数回では逆方向、偶�
 #### 【CSS_13-3】 以下のアニメーションを実装してください。
 
 ※一定時間で色が変化していくアニメーションです。
-![](https://storage.googleapis.com/zenn-user-upload/993798acb3d7-20220310.gif)
+![](https://github.com/Autumn-Frontend/Frontend_Curriculum/blob/main/image/05_JavaScript/993798acb3d7-20220310.gif?raw=true)
 
 :::details html ファイル
 
@@ -1968,7 +1968,7 @@ alternate-reverse→ 毎回逆方向の再生、奇数回では逆方向、偶�
 
 #### 【CSS_13-4】 以下の SNS アイコンを実装してください。
 
-![](https://storage.googleapis.com/zenn-user-upload/daedd5d53c20-20220310.gif)
+![](https://github.com/Autumn-Frontend/Frontend_Curriculum/blob/main/image/05_JavaScript/daedd5d53c20-20220310.gif?raw=true)
 
 :::details html ファイル
 

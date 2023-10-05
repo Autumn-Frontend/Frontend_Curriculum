@@ -57,7 +57,7 @@ npx create-react-app[react-curriculum]
 にアクセスすると以下のような画面になります。
 
 これで準備は完了です。
-![](https://storage.googleapis.com/zenn-user-upload/49929990f447-20220309.png)
+![](https://github.com/Autumn-Frontend/Frontend_Curriculum/blob/main/image/07_React/49929990f447-20220309.png?raw=true)
 
 ## Hello World!!
 
@@ -196,7 +196,7 @@ HTML の中で JavaScript を書く際は、{}で囲う必要があります。
 アプリなどを作る場合一つのファイルに全て記述するのではなく、細かいファイルに分けてコンポーネントを作成し、それを受け渡しすることによって一つの大きいアプリを作ります。
 
 どのように分けているかの例を見ていきましょう。Todo アプリの例です。
-![](https://storage.googleapis.com/zenn-user-upload/2943d819b66a-20220309.png)
+![](https://github.com/Autumn-Frontend/Frontend_Curriculum/blob/main/image/07_React/2943d819b66a-20220309.png?raw=true)
 
 root で render しているのは App.js で、その中に TodoList.js があり、さらにその中に TodoForm.js と Todo.js があります。
 それぞれのファイルにはファイル名と同じコンポーネントで値を返していて、それを他のファイルにエクスポートしており、親のコンポーネントではそれをインポートして返す値の中に入れています。
@@ -421,7 +421,7 @@ const TailwindCss = () => {
 export default Tailwindcss;
 ```
 
-![](https://storage.googleapis.com/zenn-user-upload/ff12d8b50ecd-20220309.png)
+![](https://github.com/Autumn-Frontend/Frontend_Curriculum/blob/main/image/07_React/ff12d8b50ecd-20220309.png?raw=true)
 
 よく使うような形のボタンなどはテンプレートがありますので、そこからカスタムしていくのがいいでしょう。
 これで、課題に入っていく準備が整いました！！！ 以上で React の基礎編については終了になります。
@@ -522,7 +522,7 @@ components というフォルダを作りましたが、これと同じ階層に
 
 それでは課題の内容について説明します。今回は色、テキスト、機能の違う３つのボタンを実装します。
 
-![](https://storage.googleapis.com/zenn-user-upload/d951a4d10d4b-20220309.gif)
+![](https://github.com/Autumn-Frontend/Frontend_Curriculum/blob/main/image/07_React/d951a4d10d4b-20220309.gif?raw=true)
 
 - ピンク、緑、黄色の形の同じボタンを３つ作成
 - ボタンのテキストをそれぞれ変える
@@ -672,11 +672,11 @@ App コンポーネントについては前回と同じです。わかりにく�
 ブラウザで何も表示されないこととエラーが出ていないことを確認した上で今回の実装に入ってください。
 
 以下が今回実装する課題になります。
-![](https://storage.googleapis.com/zenn-user-upload/03c01d1b68df-20220309.gif)
+![](https://github.com/Autumn-Frontend/Frontend_Curriculum/blob/main/image/07_React/03c01d1b68df-20220309.gif?raw=true)
 
-![](https://storage.googleapis.com/zenn-user-upload/7cd6446a995b-20220309.gif)
+![](https://github.com/Autumn-Frontend/Frontend_Curriculum/blob/image/image/07_React/7cd6446a995b-20220309.gif?raw=true)
 
-![](https://storage.googleapis.com/zenn-user-upload/b579f969a0da-20220309.gif)
+![](https://github.com/Autumn-Frontend/Frontend_Curriculum/blob/main/image/07_React/b579f969a0da-20220309.gif?raw=true)
 
 ３種類の useState を使った実装が入ってきます。以下課題をざっくりまとめた内容です。
 
@@ -815,7 +815,7 @@ useEffect の課題にはなりますが、useState を使った実装部分が�
 
 以下が課題になります。
 
-![](https://storage.googleapis.com/zenn-user-upload/6a58e9cd300e-20220309.gif)
+![](https://github.com/Autumn-Frontend/Frontend_Curriculum/blob/image/image/07_React/6a58e9cd300e-20220309.gif?raw=true)
 
 -　画面をリロードした時だけアラートが出る。 -　フォームに入力後、Enter、または送信で下のリストに追加される
 ちなみに今回は useEffect の課題になりますので、
@@ -1027,7 +1027,7 @@ const List = () => {
 ```
 
 結果 ↓
-![](https://storage.googleapis.com/zenn-user-upload/d52ab381415f-20220309.gif)
+![](https://github.com/Autumn-Frontend/Frontend_Curriculum/blob/image/image/07_React/d52ab381415f-20220309.gif?raw=true)
 
 はい、簡単ですね！
 
@@ -1053,14 +1053,14 @@ const List = () => {
 では完成品を見てみましょう。
 まずは Todo リストというタイトルの下に今日の予定はなんですか？というテキストがあり、その下にフォームがあります。フォームに入力し、Enter または横の追加ボタンを押すと、そのリストがどんどん下に作成されます。
 リストの構成は、入力した内容、ピンクの編集ボタン、紫の削除ボタンです。
-![](https://storage.googleapis.com/zenn-user-upload/fa87e6e3c96b-20220309.gif)
+![](https://github.com/Autumn-Frontend/Frontend_Curriculum/blob/image/image/07_React/fa87e6e3c96b-20220309.gif?raw=true)
 
 そしてピンクの編集ボタンを押すと、モーダルで現在入力されている内容がデフォルトで入ったフォームが出てきて、それを編集して変更ボタンを押すと、リストに反映されます。また、編集してもしなくても隣のキャンセルボタンをクリックすると
 編集ボタンを押す前の画面に戻ります。
-![](https://storage.googleapis.com/zenn-user-upload/a07c95826a93-20220309.gif)
+![](https://github.com/Autumn-Frontend/Frontend_Curriculum/blob/image/image/07_React/a07c95826a93-20220309.gif?raw=true)
 
 紫の削除ボタンを押した場合は、本当に削除してよろしいですか？というモーダルが出てきて、はいを押すと選択したリストが削除され、いいえを押すと削除ボタンを押す直前の画面に戻ります。
-![](https://storage.googleapis.com/zenn-user-upload/2ed17ce8747a-20220309.gif)
+![](https://github.com/Autumn-Frontend/Frontend_Curriculum/blob/image/image/07_React/2ed17ce8747a-20220309.gif?raw=true)
 
 シンプルそうに見えますが、配列操作などで結構頭を使うと思います。
 

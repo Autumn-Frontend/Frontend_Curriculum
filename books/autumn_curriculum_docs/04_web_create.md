@@ -75,17 +75,19 @@ p {
 なので例として挙げた以下のブレイクポイントが必ずしも正しいとは限りません。
 都度、時代に合ったブレイクポイントをキャッチアップし、「見やすい」サイトを作れるよう心掛ける事が重要です。
 
-**PC基準でコーディングする場合**
+**PC 基準でコーディングする場合**
+
 > スマートフォン：599px [max-width : 599px]
 > タブレット：1024px [max-width : 1024px]
-> PC：設定なし（実質1025px以上）
+> PC：設定なし（実質 1025px 以上）
 
-**SP基準でコーディングする場合**
-> スマートフォン：設定なし（実質599px以下）
+**SP 基準でコーディングする場合**
+
+> スマートフォン：設定なし（実質 599px 以下）
 > タブレット：600px [min-width : 600px]
 > PC：1,025px [min-width : 1025px]
 
-BEMとFLOCSSを用いたCSS設計、レスポンシブサイトの作り方、以上2点を意識し課題に取り組んでください！
+BEM と FLOCSS を用いた CSS 設計、レスポンシブサイトの作り方、以上 2 点を意識し課題に取り組んでください！
 難関なポイントでもありますので、トレーナーの助けも借りながら乗り越えていきましょう！
 
 ## 課題
@@ -104,11 +106,11 @@ https://kurogoma939.github.io/responsive-sample/
 
 #### PC 用
 
-![](https://storage.googleapis.com/zenn-user-upload/1bf4b463008d-20220308.png)
+![](https://github.com/Autumn-Frontend/Frontend_Curriculum/blob/main/image/04_Web%E3%82%B5%E3%82%A4%E3%83%88/1bf4b463008d-20220308.png?raw=true)
 
 #### SP 用
 
-![](https://storage.googleapis.com/zenn-user-upload/04e46b5b90c6-20220308.png)
+![](https://github.com/Autumn-Frontend/Frontend_Curriculum/blob/main/image/04_Web%E3%82%B5%E3%82%A4%E3%83%88/04e46b5b90c6-20220308.png?raw=true)
 
 # 2.Sass の学習
 
@@ -128,9 +130,9 @@ https://ninjacode.work/course/SASS
 
 ## 環境構築
 
-### Live Sass Compilerの導入
+### Live Sass Compiler の導入
 
-VS Codeの拡張機能の一つで、SCSSファイルをコンパイルしCSSファイルを出力してくれる、とても便利なプラグインです。
+VS Code の拡張機能の一つで、SCSS ファイルをコンパイルし CSS ファイルを出力してくれる、とても便利なプラグインです。
 
 （ダウンロードページ）
 https://marketplace.visualstudio.com/items?itemName=ritwickdey.live-sass
