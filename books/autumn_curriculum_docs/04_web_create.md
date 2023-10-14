@@ -104,11 +104,11 @@ https://kurogoma939.github.io/responsive-sample/
 
 #### PC 用
 
-![](https://storage.googleapis.com/zenn-user-upload/1bf4b463008d-20220308.png)
+![](https://www.autumn-group.com/wp-content/uploads/2023/10/1bf4b463008d-20220308.png)
 
 #### SP 用
 
-![](https://storage.googleapis.com/zenn-user-upload/04e46b5b90c6-20220308.png)
+![](https://www.autumn-group.com/wp-content/uploads/2023/10/04e46b5b90c6-20220308.png)
 
 # 2.Sass の学習
 

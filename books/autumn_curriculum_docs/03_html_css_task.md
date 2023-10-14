@@ -14,12 +14,12 @@ html, css の基礎学習として、div パズルという課題に取り組ん
 
 #### 【HTML/CSS_1-1】 div パズル 1
 
-![](https://storage.googleapis.com/zenn-user-upload/a5731edf5994-20220308.png)
+![](https://www.autumn-group.com/wp-content/uploads/2023/10/htmlcss1.png)
 
 #### 【HTML/CSS_1-2】 div パズル 2
 
-![](https://storage.googleapis.com/zenn-user-upload/f82f650756d9-20220308.png)
+![](https://www.autumn-group.com/wp-content/uploads/2023/10/f82f650756d9-20220308.png)
 
 #### 【HTML/CSS_1-3】 div パズル 3
 
-![](https://storage.googleapis.com/zenn-user-upload/7e08ef9eafd2-20220308.png)
+![](https://www.autumn-group.com/wp-content/uploads/2023/10/7e08ef9eafd2-20220308.png)
