@@ -25,7 +25,7 @@ https://qiita.com/ucan-lab/items/e85931bf8276da43cc97
 1. VSCode を立ち上げ、四角が４つあるアイコンをクリック（上から６番目）
 2. 検索バーに欲しいプラグイン名を記載
 3. インストール
-   ![](https://storage.googleapis.com/zenn-user-upload/b70ac80c7e28-20220308.png)
+   ![](https://www.autumn-group.com/wp-content/uploads/2023/10/b70ac80c7e28-20220308-1.png)
 
 ---
 
@@ -83,7 +83,7 @@ MacOS の方は、初期状態では Finder 上に Home アイコンが表示さ
 
 #### デスクトップ => Finder => 環境設定 => サイドバー => 🏠 アイコンにチェック
 
-![Finder設定](https://storage.googleapis.com/zenn-user-upload/0a31369042b3-20220307.png)
+![Finder設定](https://www.autumn-group.com/wp-content/uploads/2023/10/0a31369042b3-20220307-2.png)
 
 ### 隠しファイルの設定
 

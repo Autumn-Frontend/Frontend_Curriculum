@@ -24,7 +24,7 @@ Web ページを閲覧する上で必要なものが「Web サーバー」と「
 Web サーバー内にいろんな人が作った Web ページが保管されており、
 Web クライアントが Web サーバーに検索したい内容を「要求（リクエスト）」して、
 Web サーバーがそれに「応答（レスポンス）」することで、Web クライアントに検索したいものが表示されます。
-![](https://storage.googleapis.com/zenn-user-upload/b7a69ff786b2-20220308.png)
+![](https://www.autumn-group.com/wp-content/uploads/2023/10/1_b7a69ff786b2-20220308-1.png)
 
 [いまさら聞けない「Web ブラウザ」超入門](https://atmarkit.itmedia.co.jp/ait/articles/0804/14/news107.html)より引用
 
@@ -35,7 +35,7 @@ Safari、Google Chrome などの WEB サイトを閲覧するために使うソ�
 Web サーバーから送られてくる Web ページのデータは、アルファベットや記号から成り立つ暗号のような「コード」で書かれているので、快適に Web ページを閲覧することができません。
 
 そこで、Web ブラウザがコードを解読し、普段見ているような Web ページに表示させます。
-![](https://storage.googleapis.com/zenn-user-upload/9a7841efe44c-20220308.png)
+![](https://www.autumn-group.com/wp-content/uploads/2023/10/2_9a7841efe44c-20220308-1.png)
 
 ### デベロッパーツールとは
 
@@ -59,23 +59,23 @@ HTML や CSS の基礎書式を学習していきます。
 ① デスクトップ上に「test」フォルダを作成。
 ② 新規で「VScode」を開き、test フォルダを開く。
 ③ フォルダの中に、「index.html」ファイルと「style.css」ファイルを作成。
-![](https://storage.googleapis.com/zenn-user-upload/39219f8faa28-20220308.png)
+![](https://www.autumn-group.com/wp-content/uploads/2023/10/3_39219f8faa28-20220308-1.png)
 
 ④「index.html」ファイルで「！」を入力後、エンターを押す。
-![](https://storage.googleapis.com/zenn-user-upload/5d9bc16f49ab-20220308.png)
+![](https://www.autumn-group.com/wp-content/uploads/2023/10/4_5d9bc16f49ab-20220308-1.png)
 
 ⑤ 下記が表示される。これが HTML ファイルの基本構成です。 各要素は後ほど説明します。
-![](https://storage.googleapis.com/zenn-user-upload/e904fe577da4-20220308.png)
+![](https://www.autumn-group.com/wp-content/uploads/2023/10/5_e904fe577da4-20220308-1.png)
 
 ⑥「body」内に文字を入力する。
-![](https://storage.googleapis.com/zenn-user-upload/a698197f4872-20220308.png)
+![](https://www.autumn-group.com/wp-content/uploads/2023/10/6_a698197f4872-20220308-1.png)
 
 ⑦Google Chrome に「index.html」ファイルをドラッグ＆ドロップしましょう。
 ※「safari」や「Firefox」などの別ブラウザでも同じ事ができます。
-![](https://storage.googleapis.com/zenn-user-upload/23df51221dc6-20220308.png)
+![](https://www.autumn-group.com/wp-content/uploads/2023/10/7_23df51221dc6-20220308-1.png)
 
 ⑧「body」内に記載した内容が表示される。
-![](https://storage.googleapis.com/zenn-user-upload/0e1d514f8719-20220308.png)
+![](https://www.autumn-group.com/wp-content/uploads/2023/10/8_0e1d514f8719-20220308-1.png)
 
 タグについて
 タグとは？
@@ -91,7 +91,7 @@ HTML では、コンピュータに「文書構造」を理解してもらうた
 検索エンジンがあなたの作ったページを正確に認識し、SEO で検索順位を上げることができたり、
 音声ソフトを利用している視覚的に不自由な人に対しても、正確な情報を伝えることができたりするので、
 タグ付けはかなり重要なことです。
-![](https://storage.googleapis.com/zenn-user-upload/2cae9b016427-20220308.png)
+![](https://www.autumn-group.com/wp-content/uploads/2023/10/9_2cae9b016427-20220308.png)
 
 ### タグの種類
 
@@ -169,7 +169,7 @@ https://webliker.info/46840/
 ## HTML の基本構造について
 
 HTML の構造を理解しましょう。
-![](https://storage.googleapis.com/zenn-user-upload/b1455f9286ab-20220308.png)
+![](https://www.autumn-group.com/wp-content/uploads/2023/10/10_b1455f9286ab-20220308.png)
 
 **html 要素**
 html 要素は、この文書が HTML の文書であることを表します。
@@ -205,14 +205,14 @@ meta 要素は、ページの情報を定義する要素です。「UTF-8」は�
 
 #### 文字化けの例
 
-![](https://storage.googleapis.com/zenn-user-upload/52ba1bbf6b26-20220308.png)
+![](https://www.autumn-group.com/wp-content/uploads/2023/10/11_52ba1bbf6b26-20220308.png)
 
 ```html
 <title>Document</title>
 ```
 
 ページ上には表示されませんが、ブラウザのツールバーや検索エンジンの検索結果のページ名になります。
-![](https://storage.googleapis.com/zenn-user-upload/86e0131398d1-20220308.png)
+![](https://www.autumn-group.com/wp-content/uploads/2023/10/12_86e0131398d1-20220308.png)
 
 **body 要素**
 
@@ -232,7 +232,7 @@ meta 要素は、ページの情報を定義する要素です。「UTF-8」は�
 
 ① 先程作成した「test」フォルダーを開きます。
 ②「test」フォルダーの中に「index.html」と「style.css」が同じ階層にあることを確認
-![](https://storage.googleapis.com/zenn-user-upload/8951b85f51c4-20220308.png)
+![](https://www.autumn-group.com/wp-content/uploads/2023/10/13_8951b85f51c4-20220308.png)
 
 ③index.html ファイルを下記のように記載し、CSS ファイルを読み込ませる。
 
@@ -265,7 +265,7 @@ meta 要素は、ページの情報を定義する要素です。「UTF-8」は�
 ```
 
 ⑤index.html ファイルをブラウザで表示
-![](https://storage.googleapis.com/zenn-user-upload/cac2170cdf82-20220308.png)
+![](https://www.autumn-group.com/wp-content/uploads/2023/10/14_cac2170cdf82-20220308.png)
 
 ⑥style.css で下記のように記載
 
@@ -278,7 +278,7 @@ p{ color: red; }
 
 ※色が変わらない場合 ② と ③ と ⑥ を見直してください。
 
-⑧style.css で下記のように記載![](https://storage.googleapis.com/zenn-user-upload/0f0700c6b05b-20220308.png)
+⑧style.css で下記のように記載![](https://www.autumn-group.com/wp-content/uploads/2023/10/15_0f0700c6b05b-20220308.png)
 
 ```html
 p { color: red; } .test { color: blue; } #sample { color: green; }
@@ -286,7 +286,7 @@ p { color: red; } .test { color: blue; } #sample { color: green; }
 
 ⑨index.html ファイルをブラウザで表示
 　文字の色が変われば成功
-![](https://storage.googleapis.com/zenn-user-upload/081ad068a938-20220308.png)
+![](https://www.autumn-group.com/wp-content/uploads/2023/10/16_081ad068a938-20220308.png)
 
 ## CSS を読み込む方法
 
@@ -329,11 +329,11 @@ CSS を読み込む以外にも利用方法があるので、<link>タグにつ�
 #### link タグの書き方：rel と href の意味は？
 
 基本的な書き方は下記です。
-![](https://storage.googleapis.com/zenn-user-upload/4d66646e5a43-20220308.png)
+![](https://www.autumn-group.com/wp-content/uploads/2023/10/17_4d66646e5a43-20220308.png)
 
 「rel 属性」はファイルとの関係性になります。
 読み込みたいファイルの種類によって、属性値が変わります。
-![](https://storage.googleapis.com/zenn-user-upload/9fa1e27075a0-20220308.png)
+![](https://www.autumn-group.com/wp-content/uploads/2023/10/18_9fa1e27075a0-20220308.png)
 
 href 属性は外部ファイルなどを参照するのに、URL/URI やパスなどで記述する場所になります。
 
@@ -386,15 +386,15 @@ html においては下記のタグでパスを使用することが多いです
 基本的には、http://~”や”https://~から始まります。
 
 例
-![](https://storage.googleapis.com/zenn-user-upload/216e9e9065fd-20220308.png)
+![](https://www.autumn-group.com/wp-content/uploads/2023/10/19_216e9e9065fd-20220308.png)
 
 #### 相対パス(Relative path)
 
 現在いるファイルから対象のファイルまでの道順(階層構造)を記述する方法になります。
 
 例 1
-![](https://storage.googleapis.com/zenn-user-upload/61e2f232751b-20220308.png =500x)
-![](https://storage.googleapis.com/zenn-user-upload/7fe70d5566a2-20220308.png =500x)
+![](https://www.autumn-group.com/wp-content/uploads/2023/10/20_61e2f232751b-20220308.png =500x)
+![](https://www.autumn-group.com/wp-content/uploads/2023/10/21_7fe70d5566a2-20220308.png =500x)
 
 ---
 
@@ -786,11 +786,11 @@ windows
 ※右クリック後、「検証」でも OK
 
 そうすると検証ツールが表示されます。この右側の部分で、HTML のコードや CSS の値を見ることができます。
-![](https://storage.googleapis.com/zenn-user-upload/fd2902295c08-20220308.png)
+![](https://www.autumn-group.com/wp-content/uploads/2023/10/22_fd2902295c08-20220308.png)
 
 <div class=”box1”>...</div>を選択すると、
 box1に適用しているCSSの値とボックスモデルが確認できます。
-![](https://storage.googleapis.com/zenn-user-upload/959117995e76-20220308.png)
+![](https://www.autumn-group.com/wp-content/uploads/2023/10/23_959117995e76-20220308.png)
 
 ボックスモデルの解説
 
@@ -806,12 +806,12 @@ box1に適用しているCSSの値とボックスモデルが確認できます�
 ```
 
 margin 　 要素の外側にある余白
-![](https://storage.googleapis.com/zenn-user-upload/fb5d7f0b2539-20220308.png)
+![](https://www.autumn-group.com/wp-content/uploads/2023/10/24_fb5d7f0b2539-20220308.png)
 
 border 　　要素の外側の枠線
-![](https://storage.googleapis.com/zenn-user-upload/171f0f48eea3-20220308.png)
+![](https://www.autumn-group.com/wp-content/uploads/2023/10/25_171f0f48eea3-20220308.png)
 padding 　 要素の内側にある余白
-![](https://storage.googleapis.com/zenn-user-upload/a180887df109-20220308.png)
+![](https://www.autumn-group.com/wp-content/uploads/2023/10/26_a180887df109-20220308.png)
 
 ## border
 
@@ -890,7 +890,7 @@ css
 ```
 
 web
-![](https://storage.googleapis.com/zenn-user-upload/0472e641b1ac-20220308.png)
+![](https://www.autumn-group.com/wp-content/uploads/2023/10/27_0472e641b1ac-20220308.png)
 
 ### padding
 
@@ -920,7 +920,7 @@ css
 ```
 
 web
-![](https://storage.googleapis.com/zenn-user-upload/987490ac2dc6-20220308.png)
+![](https://www.autumn-group.com/wp-content/uploads/2023/10/28_987490ac2dc6-20220308.png)
 
 ### margin、padding の指定方法
 
@@ -950,7 +950,7 @@ margin は要素の外側に余白を作ることもできますが、
 それを用いて、要素の位置を変える方法もあります。
 
 中央寄せにするのに、margin:0 auto;は良う使うので、覚えていきましょう。
-![](https://storage.googleapis.com/zenn-user-upload/1d071db36703-20220308.png)
+![](https://www.autumn-group.com/wp-content/uploads/2023/10/29_1d071db36703-20220308.png)
 
 ## content-box と border-box を理解しよう
 
@@ -985,7 +985,7 @@ css
 ```
 
 web
-![](https://storage.googleapis.com/zenn-user-upload/71b2fd2eac03-20220308.png)
+![](https://www.autumn-group.com/wp-content/uploads/2023/10/30_71b2fd2eac03-20220308.png)
 
 #### border-box
 
@@ -1012,7 +1012,7 @@ css
 ```
 
 web
-![](https://storage.googleapis.com/zenn-user-upload/76f373b76936-20220308.png)
+![](https://www.autumn-group.com/wp-content/uploads/2023/10/31_76f373b76936-20220308.png)
 
 > content-box と border-box の表示領域を確認
 
@@ -1023,8 +1023,8 @@ padding と border の分だけ、コンテンツ（要素）の横幅や高さ�
 要素の横幅や高さは変化せずに、ボックスの中に padding と border を含んでくれます。
 
 余計な計算を必要としない border-box のほうが扱いやすいため、一般的に使われています。「リセット CSS」を用いる場合、基本的に border-box を使います。
-![](https://storage.googleapis.com/zenn-user-upload/6d69a5d2a37b-20220308.png)
-![](https://storage.googleapis.com/zenn-user-upload/6278eca3459c-20220308.png)
+![](https://www.autumn-group.com/wp-content/uploads/2023/10/32_6d69a5d2a37b-20220308.png)
+![](https://www.autumn-group.com/wp-content/uploads/2023/10/33_6278eca3459c-20220308.png)
 
 ## リセット CSS について
 
@@ -1036,7 +1036,7 @@ padding と border の分だけ、コンテンツ（要素）の横幅や高さ�
 
 ブラウザのデフォルト値を見てみよう
 検証ツールを開き、各要素を選択するとブラウザごとのデフォルトの CSS を見ることができます。
-![](https://storage.googleapis.com/zenn-user-upload/1ee0b626019b-20220308.png)
+![](https://www.autumn-group.com/wp-content/uploads/2023/10/34_1ee0b626019b-20220308.png)
 
 #### リセット CSS を適用し変化を見てみよう
 
@@ -1063,7 +1063,7 @@ windows 　`「ctrl」+「/」`
 　デフォルトの CSS 無くした状態で表示されます。
 
 このとき、ブロック要素の box-sizing が content-box から border-box に変更されます。リセット CSS を利用する場合は border-box を基準に制作する必要があります。
-![](https://storage.googleapis.com/zenn-user-upload/8a861f10f375-20220308.png)
+![](https://www.autumn-group.com/wp-content/uploads/2023/10/35_8a861f10f375-20220308.png)
 
 公開しているリセット CSS を見てみよう
 リセット CSS のデータは下記サイトなどネット上に公開されています。今後、自身のポートフォリオを作成する際などに使いましょう。
@@ -1093,7 +1093,7 @@ https://webdesign-trends.net/entry/8137#i
 インラインブロック要素とは、ブロックレベル要素とインライン要素の性質を併せ持った要素です。
 横幅と高さの指定が可能で、横幅の初期値が内容で決まる等、他 2 つの要素に比べて直感的なコーディングができます。
 display プロパティの記述を 1 行付け足すだけで、各要素をインラインブロック要素に変えることができます。
-![](https://storage.googleapis.com/zenn-user-upload/cee53d14199d-20220308.png)
+![](https://www.autumn-group.com/wp-content/uploads/2023/10/36_cee53d14199d-20220308.png)
 
 ## 疑似要素
 
@@ -1130,7 +1130,7 @@ css
 ```
 
 web
-![](https://storage.googleapis.com/zenn-user-upload/73cc2b971304-20220308.png)
+![](https://www.autumn-group.com/wp-content/uploads/2023/10/37_73cc2b971304-20220308.png)
 
 ## 疑似要素クラス
 
@@ -1181,7 +1181,7 @@ p:nth-child(even) {
 ```
 
 web
-![](https://storage.googleapis.com/zenn-user-upload/3ac5387a1ec7-20220308.png)
+![](https://www.autumn-group.com/wp-content/uploads/2023/10/38_3ac5387a1ec7-20220308.png)
 
 #### 何番目以降
 
@@ -1196,7 +1196,7 @@ p:nth-child(n + 2) {
 ```
 
 web
-![](https://storage.googleapis.com/zenn-user-upload/2bcc0d2bcd40-20220308.png)
+![](https://www.autumn-group.com/wp-content/uploads/2023/10/39_2bcc0d2bcd40-20220308.png)
 
 #### :hover
 
@@ -1224,10 +1224,10 @@ css
 ```
 
 web
-![](https://storage.googleapis.com/zenn-user-upload/ce11e91241a1-20220308.png)
+![](https://www.autumn-group.com/wp-content/uploads/2023/10/40_ce11e91241a1-20220308.png)
 
 カーソルをあわせた状態
-![](https://storage.googleapis.com/zenn-user-upload/792531a8e856-20220308.png)
+![](https://www.autumn-group.com/wp-content/uploads/2023/10/41_792531a8e856-20220308.png)
 
 ## position
 
@@ -1272,7 +1272,7 @@ css
 ```
 
 web
-![](https://storage.googleapis.com/zenn-user-upload/b6fd283223ee-20220308.png)
+![](https://www.autumn-group.com/wp-content/uploads/2023/10/42_b6fd283223ee-20220308.png)
 
 #### position: relative;
 
@@ -1299,7 +1299,7 @@ css
 ```
 
 web
-![](https://storage.googleapis.com/zenn-user-upload/8d4216c95537-20220308.png)
+![](https://www.autumn-group.com/wp-content/uploads/2023/10/43_8d4216c95537-20220308.png)
 
 #### position: relative;
 
@@ -1329,7 +1329,7 @@ css
 ```
 
 web
-![](https://storage.googleapis.com/zenn-user-upload/3142c308ba08-20220308.png)
+![](https://www.autumn-group.com/wp-content/uploads/2023/10/44_3142c308ba08-20220308.png)
 
 親要素が relative でない場合
 
@@ -1355,7 +1355,7 @@ css
 ```
 
 web
-![](https://storage.googleapis.com/zenn-user-upload/8fd3402ff881-20220308.png)
+![](https://www.autumn-group.com/wp-content/uploads/2023/10/45_8fd3402ff881-20220308.png)
 
 ## float
 
@@ -1403,7 +1403,7 @@ css
 ```
 
 web
-![](https://storage.googleapis.com/zenn-user-upload/61a4d5c2b3b6-20220308.png)
+![](https://www.autumn-group.com/wp-content/uploads/2023/10/46_61a4d5c2b3b6-20220308.png)
 
 float ありの状態（1 つのみ）
 box1 のみ float を入れます。そうすると、box2 の上に box1 が表示されます。
@@ -1433,10 +1433,10 @@ css
 ```
 
 web
-![](https://storage.googleapis.com/zenn-user-upload/321a9fdd9983-20220308.png)
+![](https://www.autumn-group.com/wp-content/uploads/2023/10/47_321a9fdd9983-20220308.png)
 
 横から見たとき
-![](https://storage.googleapis.com/zenn-user-upload/7e0ba4551abb-20220308.png)
+![](https://www.autumn-group.com/wp-content/uploads/2023/10/48_7e0ba4551abb-20220308.png)
 
 float で配置場所を変える
 浮かせた状態で、プロパティー値を変えることで左右のどちらかに配置することができます。
@@ -1466,7 +1466,7 @@ css
 ```
 
 web
-![](https://storage.googleapis.com/zenn-user-upload/7a13401aae0f-20220308.png)
+![](https://www.autumn-group.com/wp-content/uploads/2023/10/49_7a13401aae0f-20220308.png)
 
 #### float で横並びにする
 
@@ -1497,7 +1497,7 @@ css
 ```
 
 web
-![](https://storage.googleapis.com/zenn-user-upload/1f46a1e065c7-20220308.png)
+![](https://www.autumn-group.com/wp-content/uploads/2023/10/50_1f46a1e065c7-20220308.png)
 
 ## clearfix
 
@@ -1508,7 +1508,7 @@ web
 
 やりたいこと
 web
-![](https://storage.googleapis.com/zenn-user-upload/e0a7b3aa249f-20220308.png)
+![](https://www.autumn-group.com/wp-content/uploads/2023/10/51_e0a7b3aa249f-20220308.png)
 
 現状のやり方でやると
 box1〜3 が float で浮いているので、box4 が隠れてしまします。
@@ -1553,7 +1553,7 @@ css
 ```
 
 web
-![](https://storage.googleapis.com/zenn-user-upload/ccc527453593-20220308.png)
+![](https://www.autumn-group.com/wp-content/uploads/2023/10/52_ccc527453593-20220308.png)
 
 #### clearfix で入り込みを「なし」にする
 
@@ -1585,7 +1585,7 @@ wrap に擬似要素（after）を用いて、下側に回り込まないよう�
 
 web
 回り込みを無くし、1 段目と 2 段目ができました。
-![](https://storage.googleapis.com/zenn-user-upload/9d92f2bbf6ae-20220308.png)
+![](https://www.autumn-group.com/wp-content/uploads/2023/10/51_e0a7b3aa249f-20220308.png)
 
 #### clearfix を解説
 
@@ -1610,7 +1610,7 @@ web
 `clear`は、`float`を解除するためのプロパティです。
 右フロートを解除する right、左フロートを解除する left、左右の両方を解除する both があります。
 `clear: both;`では、左寄せ・右寄せの両方の float を解除します。
-![](https://storage.googleapis.com/zenn-user-upload/ad513ee09b37-20220308.png)
+![](https://www.autumn-group.com/wp-content/uploads/2023/10/55_ad513ee09b37-20220308.png)
 
 他の書き方を見よう
 下記のように表示させたい場合
@@ -1632,7 +1632,7 @@ css
 ```
 
 web
-![](https://storage.googleapis.com/zenn-user-upload/dc97cf7502aa-20220308.png)
+![](https://www.autumn-group.com/wp-content/uploads/2023/10/56_dc97cf7502aa-20220308.png)
 
 ## flex
 
@@ -1650,7 +1650,7 @@ Flexbox は横並び以外にも色々なレイアウトを可能にしていま
 
 Flex コンテナーと呼ばれる親要素の中に、Flex アイテムと呼ばれる子要素を入れます。
 親要素に「display: flex;」を入れ、flex プロパティを入れることで様々なレイアウトをすることを可能にします。
-![](https://storage.googleapis.com/zenn-user-upload/d90f6365e2c6-20220308.png)
+![](https://www.autumn-group.com/wp-content/uploads/2023/10/57_d90f6365e2c6-20220308.png)
 
 html
 
@@ -1669,19 +1669,19 @@ html
 ```
 
 web
-![](https://storage.googleapis.com/zenn-user-upload/c1f128011080-20220308.png)
+![](https://www.autumn-group.com/wp-content/uploads/2023/10/58_c1f128011080-20220308.png)
 
 flex-direction（子要素の並ぶ向き）
 
-![](https://storage.googleapis.com/zenn-user-upload/c1188e7b866c-20220308.png)
+![](https://www.autumn-group.com/wp-content/uploads/2023/10/59_c1188e7b866c-20220308.png)
 
-![](https://storage.googleapis.com/zenn-user-upload/ca2319c31130-20220308.png)
+![](https://www.autumn-group.com/wp-content/uploads/2023/10/60_ca2319c31130-20220308.png)
 
 flex-wrap （子要素の折り返し）
-![](https://storage.googleapis.com/zenn-user-upload/02b644687ae0-20220308.png)
+![](https://www.autumn-group.com/wp-content/uploads/2023/10/61_02b644687ae0-20220308.png)
 
 justify-content （水平方向の揃え）
-![](https://storage.googleapis.com/zenn-user-upload/468f91a8bf7b-20220308.png)
+![](https://www.autumn-group.com/wp-content/uploads/2023/10/62_468f91a8bf7b-20220308.png)
 
 align-items … 垂直方向の揃え
-![](https://storage.googleapis.com/zenn-user-upload/26531e4399d2-20220308.png)
+![](https://www.autumn-group.com/wp-content/uploads/2023/10/63_26531e4399d2-20220308.png)
