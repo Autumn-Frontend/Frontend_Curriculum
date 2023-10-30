@@ -34,7 +34,7 @@ https://github.com/hiloki/flocss
 メディアクエリとは、ブラウザの横幅がどれくらいかを取得してくれる便利なものです。
 実際に、CSS で書いてみると以下のようになります。
 
-```css
+```
 /*
 @media以外の所は全てのサイズで読み込まれます。
 */
@@ -61,7 +61,7 @@ p {
 〜以下を指定したい場合は`max-width`で指定をします。
 また、いっそ画面幅ごとファイルを変えたいという場合は、以下のようにすれば切り替えることが可能です。
 
-```css
+```
 <link rel="stylesheet" href="small.css" media="screen and (max-width:599px)">/*　画面サイズが480pxまでこのファイルのスタイルが適用される。*/
 <link rel="stylesheet" href="medium.css" media="screen and (min-width:599px) and (max-width:1024px)"> /* 画面サイズ599pxから1024pxまではこのファイルのスタイルが適用される。 */
 <link rel="stylesheet" href="wide.css" media="screen and (min-width:1024px)">/* 画面サイズ1024px以上はこのファイルはスタイルが適用される */
