@@ -8,7 +8,7 @@ title: "JavaScript"
 
 どのプログラムもまずは、ここから。Hello world をデベロッパーツールのコンソールに表示させます。
 
-```html:index.html
+```
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,7 +24,7 @@ title: "JavaScript"
 </html>
 ```
 
-```javascript:main.js
+```
 //devツールのコンソールでHello world!が確認できます。
 console.log('Hello world!');
 ```
@@ -49,7 +49,7 @@ var のスコープ範囲は関数スコープ内で、let, const はブロッ�
 | 再代入 | ◯ | ◯ | × |
 | スコープ | 関数 | ブロック | ブロック |
 
-```javascript:main.js
+```
 let message; //変数の宣言
 message = 'Hello!'; // 変数の値の代入
 console.log(message); // Hello!が出力されます。
@@ -62,7 +62,7 @@ console.log(message); //こんにちはが出力されます。
 
 ※現在、let が推奨されていてあまり使うことはありません。
 
-```javascript:var.js
+```
 var a = 'おはようございます。';
 a = 'こんにちは。'; //再代入ができます。
 var a = '初めまして！'; //再宣言も可能です。
@@ -78,7 +78,7 @@ let b = '初めまして。';  //再宣言はできません。
 
 ※厳密に言えば、const で宣言してもオブジェクトのキーは変更可能です。
 
-```javascript:const.js
+```
 const c = 'おはようございます。';
 c = 'こんにちは。'; //再代入はできません。
 const c = '初めまして。'; //再宣言もできません。
@@ -106,7 +106,7 @@ JavaScript には連想配列がないため、そのような機能を使いた
 
 ### ドット記法
 
-```javascript
+```
 // 定義の仕方
 let userData = {
     'name': 'John',
@@ -125,7 +125,7 @@ console.log(userData.key); // 変数かキーか識別できないためエラ�
 
 ### ブラケット記法
 
-```javascript
+```
 // 定義の仕方
 let userData = {
   name: "John",
@@ -148,7 +148,7 @@ console.log(userData[key]); // game 変数にキーを指定して呼び出す�
 
 #### 【JS_1-2】 以下の変数を条件の通り編集し、最後に出力してください。
 
-```javascript
+```
 var number = 100;
 let userName = "Takashi";
 ```
@@ -161,7 +161,7 @@ let userName = "Takashi";
 Object を定義しました。そこに対し、name, age, hobby というプロパティを追加し、
 「name さんは age 歳で、趣味は hobby です」という文をコンソールに出力してください。
 
-```javascript
+```
 let userData = {};
 ```
 
@@ -250,7 +250,7 @@ if 文の条件だとかでよく使われます。
 文字列を連結させたい場合、JavaScript では「+」演算子を使用します。
 join 関数でも連結できます。
 
-```javascript:main.js
+```
 //変数同士の連結
 let str1 = "こんにちは";
 let str2 = "太郎さん";
@@ -280,7 +280,7 @@ console.log(result); //redyellowbluegreenと出力される。
 
 JavaScript で正規表現を扱う際は RegExp を用いるか/で囲う必要があります。
 
-```javascript
+```
 //リテラル記法
 const regexp = /[A-Z][a-zA-Z]/;
 
@@ -319,20 +319,20 @@ console.log(target.match(regex)); // => [ 'JavaScript', 'React', 'TypeScript' ]
 
 #### 【JS_3-2】以下のコードで、文字列は数値に、数値は文字列に変換し、最後に型を確認できるような出力を行ってください。
 
-```javascript
+```
 let number = 123456;
 let string = "789098";
 ```
 
 #### 【JS_3-3】 以下の文で、「autumn」を「AUTUMN」に変換し、出力してください。
 
-```javascript
+```
 let text = "株式会社autumnです";
 ```
 
 #### 【JS_3-4】 以下で定義する変数には、エクセルのファイルパスが格納されています。ここから、ファイル名だけを抽出してください。
 
-```javascript
+```
 let filePath = "user/document/excel/社員総会出席者リスト.xlsx";
 
 // 最終的な出力
@@ -347,7 +347,7 @@ console.log(fileName);
 
 配列というのは『連番が付けられた変数の集合体』のことです。配列を使うことで複数の値を 1 つの変数で保管・管理することができます。
 
-```javascript:main.js
+```
 var arr = ["Red", "Green", "Blue"];
 console.log(arr);                     // => ["Red", "Green", "Blue"]
 console.log(arr[0]);                  // => "Red"
@@ -357,7 +357,7 @@ console.log(arr[2]); // => "Blue"
 
 以下のようにして多次元の配列も扱うことができます。
 
-```javascript:main.js
+```
 let userData = [
   ['Yamada', 28, 'Tokyo'],
   ['Suzuki', 35, 'Fukuoka'],
@@ -376,7 +376,7 @@ for 文より簡潔に記述することができます。
 ループ処理は次の課題で扱うので軽く見る程度で大丈夫です
 :::
 
-```javascript:main.js
+```
 const arry = [1, 2, 3, 4, 5];
 
 //コールバック関数にfunctionを記述する。
@@ -400,7 +400,7 @@ arry.forEach(val => console.log(val));
 for-in を使って、一般的なオブジェクトを処理する構文は次の通りです。
 オブジェクトの中身を取り出したいときによく使用されます。
 
-```javascript:main.js
+```
 var object = {
     name: '田中',
     age: 20,
@@ -425,7 +425,7 @@ for( var item in object ) {
 
 #### 通常の配列処理の場合
 
-```javascript
+```
 // 姓名の配列
 let arr = ["John", "Smith"];
 
@@ -438,7 +438,7 @@ console.log(lastName); // Smith
 
 #### 分割代入を用いた場合
 
-```javascript
+```
 // 姓名の配列
 let arr = ["John", "Smith"];
 // 分割代入
@@ -452,7 +452,7 @@ console.log(lastName); // Smith
 
 なお、左辺を直接オブジェクトにして一気に格納することも可能です。
 
-```javascript
+```
 let user = {};
 [user.name, user.surname] = "John Smith".split(" ");
 
@@ -462,7 +462,7 @@ alert(user.surname); // Smith
 
 また、この分割代入は値がなかった時のために初期値を設定することができます
 
-```javascript
+```
 // デフォルト値
 let [name = "Guest", surname = "Anonymous"] = ["Julius"];
 
@@ -476,7 +476,7 @@ alert(surname); // Anonymous (デフォルトが使用されました)
 
 #### PHP の記述
 
-```php:sample.php
+```
 $userDataList = [
     'name' => 'Takashi',
     'age' => 25
@@ -492,7 +492,7 @@ foreach($userDataList as $key => $value){
 
 #### 分割代入の記述
 
-```javascript
+```
 let user = {
   name: "John",
   age: 30,
@@ -513,7 +513,7 @@ Spread Operator（スプレッド演算子）とは、　`...`　を用いた値
 
 配列を呼び出す際に、`...配列の変数名`とすると中身を一気に取り出せます。
 
-```javascript
+```
 function func1(a, b, c) {
   console.log("func1", a, b, c);
 }
@@ -539,7 +539,7 @@ console.log("d1:", d1); // => [1, 2, 3] # 影響を受けない
 
 ##### 残りのプロパティを一気に受け付ける（...others のところ）
 
-```javascript
+```
 let person = {
   firstName: "Yohei",
   lastName: "Munesada",
@@ -559,7 +559,7 @@ console.log("others:", others); // => others: { age: 31, city: 'yokohama', favs:
 
 ##### オブジェクト内への展開（同じく...others のところ）
 
-```javascript
+```
 let other = { age: 31, city: "yokohama", favs: ["Ramen", "Tennis"] };
 
 let person = {
@@ -596,7 +596,7 @@ https://ja.javascript.info/array-methods
 第二引数(`index`)は、現在のインデックス番号が入ります。<br>
 result では array に入っている値を 2 倍した値を格納した新しい配列が生成され、result2 では、array2 のインデックス（array2 の要素数は２なので、0, 1 という順番でインデックス番号が振られていく）を 10 で掛けた値が格納されています。
 
-```javascript
+```
 const array = [1, 4, 9, 16];
 const array2 = ["Taro", "Jiro"];
 
@@ -620,7 +620,7 @@ console.log(result2);
 このコールバック関数で行なっていることは、word に入る配列の要素が 6 文字以上であるかをテストしています。<br>
 そして、テストをクリアした値だけ result という新しい配列に格納されています。
 
-```javascript
+```
 const words = [
   "spray",
   "limit",
@@ -652,7 +652,7 @@ console.log(result);
 - `index` – 現在の配列のインデックスです。
 - `arr` – `reduce()`メソッドを使用している配列です。（使用頻度は少ないです）
 
-```javascript
+```
 const value = arr.reduce(function (accumulator, item, index, arr) {
   // ...
 }, initial);
@@ -669,7 +669,7 @@ const value = arr.reduce(function (accumulator, item, index, arr) {
 3. ３回目の実行では、sum = 3 で、それに１つ要素を足します。それが続きます。
 4. これらを続けた結果が result に格納され、15 という配列の合計値が出力されます。
 
-```javascript
+```
 const arr = [1, 2, 3, 4, 5];
 
 const result = arr.reduce((sum, current) => sum + current, 0);
@@ -681,7 +681,7 @@ alert(result); // 15
 
 #### 【JS_4-1】 以下の配列からデータを取得し、サンプルのように出力してください。 なお、２種類の配列を作成したのでそれぞれ出力してください。
 
-```javascript
+```
 // サンプル
 // ユーザー名 : 勇者ヨシヒコ
 // メールアドレス : yoshihiko@yusha.com
@@ -700,7 +700,7 @@ const array2 = {
 
 #### 【JS_4-2】 以下に定義したオブジェクト型配列の中身をコメントアウトに従って処理をしてください。
 
-```JavaScript
+```
 let array = {
     name: 'takenaka',
     age: 25,
@@ -714,7 +714,7 @@ let array = {
 
 #### 【JS_4-3】 以下の配列に対し、「分割代入」を行い、指定した結果通り出力してください。
 
-```JavaScript
+```
 const userData = {
     name : "大槻",
     age : 24,
@@ -728,20 +728,20 @@ const userData = {
 
 #### 【JS_4-4】 スプレッド構文を用いて 1 つの配列を 3 つの配列に分けてください。 </br> ※ 出力を複数回に分けて構いません。
 
-```javascript
+```
 const array = ["a", "b", "c", "d", "e", "f"];
 ```
 
 #### 【JS_4-5】 以下の配列を連結し、出力してください。
 
-```JavaScript
+```
 let array1 = ['こんにちは','おはよう','さようなら'];
 let array2 = ['ヤッホー','わーい','バイバイ'];
 ```
 
 #### 【JS_4-6】 分割代入と map を用いて、users をコメントアウトのような形になるように加工し、result という変数に格納し、出力してください。
 
-```javascript
+```
 const users = [
   {
     id: 1,
@@ -790,7 +790,7 @@ const result
 
 #### 【JS_4-7】 分割代入と filter を用いて、items の中から price が 500 以上のものだけを取り出し、result という変数に格納し、出力してください。
 
-```javascript
+```
 const items = [
   {
     id: 1,
@@ -819,7 +819,7 @@ const result
 
 #### 【JS_4-8】 分割代入と reduce を用いて、items という配列に格納された price の合計値を求めて result という変数に格納し、出力してください。
 
-```javascript
+```
 const items = [
   {
     id: 1,
@@ -840,7 +840,7 @@ const result
 
 #### 【JS_4-9】以下の多次元配列の各配列内で 20 以上の数値を 1 つだけ取得し、新しい配列 result に格納してください
 
-```javascript
+```
 const data = [
   [10, 23, 38],
   [45, 59, 26],
@@ -852,7 +852,7 @@ console.log(result); // [23, 45, 39]
 
 #### 【JS_4-10】下記 grade の連想配列から英語の点数だけの配列を作成し、点数を 2 倍にしてください。
 
-```javascript
+```
 const grade = [
   { name: "佐藤", subject: "math", score: 78 },
   { name: "高橋", subject: "English", score: 84 },
@@ -876,7 +876,7 @@ console.log(result); //[168, 180, 124, 136]
 for 文などの繰り返し処理は、同じ処理を繰り返し行う構文です。
 for 文は、括弧で囲みセミコロンで区切った 3 つの引数と、続いてループ内で実行される文 (ふつうはブロック文) から成るループを構成します。
 
-```javascript:main.js
+```
 let str = "";
 //for ([初期化式]; [条件式]; [加算式])で表している。
 for (let i = 0; i < 9; i++) {
@@ -889,7 +889,7 @@ console.log(str);
 
 プロパティの「値」を取得するには、**オブジェクト[ プロパティ ]** の形で記述します。
 
-```javascript:main.js
+```
 for ( var item in object ) {
     //オブジェクト[ プロパティ ]の形で記述する。
     console.log( object[item] );
@@ -903,7 +903,7 @@ for ( var item in object ) {
 for-of は主に配列や文字列などの繰り返し処理に使われています。
 配列では値が 1 つずつ変数へ代入されているので、それぞれの値に対して処理を実行できます。
 
-```javascript:main.js
+```
 var array = [0, 1, 2, 3, 4, 5];
 
 for(var item of array){
@@ -930,7 +930,7 @@ for(var item of array){
 ※ エクセルのカラムをイメージすればわかりやすいと思います。
 // アルファベットの配列
 
-```javascript
+```
 const alphabet = "abcdefghijklmnopqrstuvwxyz".split("");
 ```
 
@@ -942,7 +942,7 @@ const alphabet = "abcdefghijklmnopqrstuvwxyz".split("");
 
 if 文は、「もし A ならば B を実行し、A でなければ C を実行」のように、条件や状況に応じて実行内容を変えたい場合に使用します。プログラミング言語には`true`（正）と`false'（誤）という概念があり、条件式と比較し true の場合と false の場合それぞれの処理を記述していきます。
 
-```javascript:main.js
+```
 if  (条件式) {
    条件式が真(true)の処理;
 } else {
@@ -988,7 +988,7 @@ if (color == "青" || color == "緑" ) {
 
 まず最初に、「IF 文」のおさらいをもう 1 度しておきましょう。
 
-```javascript
+```
 if (条件式) {
   //Trueの処理
 } else {
@@ -1004,7 +1004,7 @@ if (条件式) {
 
 基本的な使い方
 
-```javascript:
+```
 console.log( 15 > 6 ? true : false ); //実行結果 true
 ```
 
@@ -1014,11 +1014,11 @@ console.log( 15 > 6 ? true : false ); //実行結果 true
 値や変数や関数などの後に??と記述することで使えます。null か undefined の場合だけ右側の値を返すので、初期値を設定したい場合に便利です。
 null は値が空であることをあらわすオブジェクトで、undefined は宣言のみがおこなわれた変数の値や、return のない関数の戻り値です。
 
-```javascript
+```
 let message = userRequest ?? "nullかundefinedの場合はこのメッセージです";
 ```
 
-```javascript
+```
 returnの無い関数はundefinedを返します。関数呼び出しにNull合体演算子を使ってみます。
 function noReturn(){
  console.log('noReturnが呼ばれました')
@@ -1029,7 +1029,7 @@ let message = noReturn() ?? 'nullかundefinedの場合はこのメッセージ�
 
 変数 message には、null か undefined の場合はこのメッセージです、が格納されています。
 
-```javascript
+```
 let message = "" ?? "nullかundefinedの場合はこのメッセージです";
 ```
 
@@ -1048,7 +1048,7 @@ null と undefined 以外は左側が返されるので、変数 message には�
 - 変数が 0 の場合 => はずれと出力
 - 変数が 9 の場合 => エラーが生じましたと出力
 
-```javascript
+```
 let loto = [0, 1, null];
 // ランダムな数字を出力する
 let key = Math.floor(Math.random() * 3);
@@ -1066,7 +1066,7 @@ let key = Math.floor(Math.random() * 3);
 相手が Joker の場合 => 「負けました。仕方がない」と出力
 引き分けの場合 => 「引き分けです」と出力
 
-```javascript:main.js
+```
 const cardList = [
 'A','2','3','4','5','6','7','8','9','10','J','Q','K','Joker'
 ];
@@ -1085,7 +1085,7 @@ let enemyCard = cardList[num2];
 関数とは、同じ処理をまとめて定義し、何度も使い回しができるかたちにしたものです。
 関数を定義するときにまず必要となってくるのが、function（関数の意）です。それに続けて関数につける名前を書き、`{ }`のなかに処理を書きます。一番シンプルに書くとこのようになります。
 
-```javascript
+```
 function 関数名() {
   処理;
 }
@@ -1095,7 +1095,7 @@ function 関数名() {
 引数とは、外部から受け渡される値となっています。
 また、基本的に関数の結果は return で返すようにしましょう。return とは、値を返すことに加え、そこで処理を止めることができます。
 
-```javascript
+```
 // 関数の定義
 function hello1(name) {
   var message = "Hello, " + name;
@@ -1117,7 +1117,7 @@ console.log(result1); //Hello, yamadaが出力される。
 
 使い方は、`function hoge({a, b, c}){}`と`({})`で定義をし、
 
-```javascript
+```
 // 通常の関数
 function getUserData(name, age) {
   return `${name}さんは${age}歳です`;
@@ -1151,7 +1151,7 @@ console.log(getProfile({ name: "たかし", age: 20 }));
 
 // メッセージリスト
 
-```javascript
+```
 const messageList = {
   MSG00001: "対象データがありません。",
   MSG00002: "処理が成功しました。",
@@ -1170,7 +1170,7 @@ const messageList = {
 関数の記述方法としてアロー関数というものがあります。
 復習として通常の関数の記述から説明します。
 
-```javascript:main.js
+```
 //一般的な関数の記述。
 function hello(name) {
    console.log('hello' + name );
@@ -1187,7 +1187,7 @@ const hello = function (name) {
 
 この function の形を=>の記述に変更したものがアロー関数です。関数の記述を省略して簡潔に表すことができます。
 
-```javascript:main.js
+```
 // functionを=>の記述に変更する。
 const hello = (name) => {
   console.log('hello' + name );
@@ -1212,7 +1212,7 @@ arry.forEach(value => console.log(value));
 引数に渡す関数のことをコールバック関数と呼びます。
 JavaScript では関数を変数として扱うことが出来ます。
 
-```javascript
+```
 //hello関数の引数であるcallbackにgetName関数が格納されています。
 function hello(callback) {
   //callback()にて文字列taroが戻り値として展開される。
@@ -1235,7 +1235,7 @@ hello(getName);
 
 ※arrow にすることにより省略できる部分は極力省略してください。
 
-```javascript
+```
 function janken() {
   let number = rand(1, 3);
   let hand = "";
@@ -1258,7 +1258,7 @@ function janken() {
 
 #### 【JS_8-2】 以下の通常の関数を、arrow 関数で置き換えて提出してください。
 
-```javascript
+```
 function getProfile({ name, age }) {
   return "私は" + name + "です。年齢は" + age + "歳です。";
 }
@@ -1273,7 +1273,7 @@ function getProfile({ name, age }) {
 JavaScript での this とは、オブジェクトを参照するキーワードと定義されています。
 this をどこで使用するか何を参照するかで中身が変化する変数です。
 
-```javascript
+```
 const human = {
    name: '山田',
    age: 20,
@@ -1289,7 +1289,7 @@ human.printName();
 クラスの中で this を定義すると以下の記述になります。
 クラスを記述した段階ではオブジェクトが生成される前なので、this を記述しプロパティに値を設定する必要があります。
 
-```javascript
+```
 class Person {
   //オブジェクトが生成される前なので、thisを記述しプロパティに値を設定します。
   constructor() {
@@ -1310,7 +1310,7 @@ yamada.introduction();
 bind とは、関数に対して this や引数を指定することができるメソッドです。
 関数内の this は関数自体を指す性質がありますが、その this を書き換えることによって参照するプロパティを変更できます。
 
-```javascript
+```
 function Person(name, hobby) {
   this.name = name;
   this.hobby = hobby;
@@ -1344,7 +1344,7 @@ person.introduction.bind(yamada)();
 
 #### 【JS_9-2】 以下のコードを編集して、最終的に「こんにちは。私はハルクです。年齢は 40 歳で趣味は裁縫です。」と出力させてください。
 
-```javascript
+```
 function Person(name, age) {
   this.name = name;
   this.age = age;
@@ -1377,7 +1377,7 @@ taro.self_introduction.bind(hachi)();
 
 クラスの記述方法は以下の記述になります。
 
-```javascript
+```
 class クラス名 {
   変数や処理を記述する;
 }
@@ -1385,7 +1385,7 @@ class クラス名 {
 
 クラスには constructor というオブジェクトを生成する際に、初期化関数として呼ばれるメソッドを定義するものがあります。
 
-```javascript
+```
 //FullNameというクラスを宣言します。
 class FullName {
   //constructorでクラスを生成した際にクラスの初期設定を行う。
@@ -1402,7 +1402,7 @@ let human = new FullName("太郎", "山田");
 クラスの中にメソッドを定義することもできます。
 メソッドを呼び出す記述は以下の通りです。
 
-```javascript
+```
 class Human {
   constructor(name, age, job, hobby) {
     this.name = name;
@@ -1426,7 +1426,7 @@ console.log(yamada.getName());
 
 クラスを継承することもできます。ある親クラスの内容を引き継いだ子クラスを作成することを継承するといいます。クラスの継承を行うには`extends`キーワードを使用し、継承した子クラスからは親クラスの所有するメソッドやプロパティを使用することができます。
 
-```javascript
+```
 //親クラスを継承する記述方法。
 class クラス名 extends 親クラス名 {
   // クラスの定義
@@ -1475,7 +1475,7 @@ DOM 操作を行うには、ブラウザに格納されている document の情
 
 ※CRUD・・・CRUD とはデータの作成(Create)、読み出し(Read)、更新(Update)、削除(Delete)を表す言葉のことです。
 
-```html:index.html
+```
 <html>
   <head>
     <meta charset="utf-8" />
@@ -1488,7 +1488,7 @@ DOM 操作を行うには、ブラウザに格納されている document の情
 </html>
 ```
 
-```JavaScript:main.js
+```
 //documentからbox1の情報を取得し、box1に格納します。
 const box1 = document.getElementById('box1');
 
@@ -1531,7 +1531,7 @@ https://www.fenet.jp/dotnet/column/language/6526/
 ![](https://www.autumn-group.com/wp-content/uploads/2023/10/a66085224f24-20220310.gif)
 :::details html ファイル
 
-```html:index.html
+```
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -1565,10 +1565,7 @@ https://www.fenet.jp/dotnet/column/language/6526/
 </html>
 ```
 
-:::
-:::details css ファイル
-
-```css:style.css
+```
 * {
 	margin: 0;
 	padding: 0;
@@ -1649,15 +1646,11 @@ https://www.fenet.jp/dotnet/column/language/6526/
   }
 ```
 
-:::
-
 #### 【JS_12-2】 以下のサイズ変換機能を実装してください。
 
 ![](https://www.autumn-group.com/wp-content/uploads/2023/10/2d286e27e2d0-20220310.gif)
 
-:::details html ファイル
-
-```html:index.html
+```
 <!DOCTYPE html>
 <html lang="en">
 
@@ -1683,10 +1676,7 @@ https://www.fenet.jp/dotnet/column/language/6526/
 </html>
 ```
 
-:::
-:::details css ファイル
-
-```css:style.css
+```
 .box{
 	background-color: salmon;
 	width: 100px;
@@ -1694,15 +1684,11 @@ https://www.fenet.jp/dotnet/column/language/6526/
   }
 ```
 
-:::
-
 #### 【JS_12-3】 以下のハンバーガーメニューを実装してください。
 
 ![](https://www.autumn-group.com/wp-content/uploads/2023/10/9aaa919e7359-20220310.gif)
 
-:::details html ファイル
-
-```html:index.html
+```
 <!DOCTYPE html>
 <html lang="en">
 
@@ -1736,10 +1722,7 @@ https://www.fenet.jp/dotnet/column/language/6526/
 </html>
 ```
 
-:::
-:::details css ファイル
-
-```css:style.css
+```
 body{
 	margin: 0;
 	padding: 0;
@@ -1794,8 +1777,6 @@ body{
   }
 ```
 
-:::
-
 # 13.CSS アニメーション
 
 JavaScrip でアニメーションをしていただきましたが、実は簡易的なアニメーションは CSS で実装することが多いです。まずは CSS アニメーションの基本を学習し、課題に取り組んでみましょう。
@@ -1806,7 +1787,7 @@ JavaScrip でアニメーションをしていただきましたが、実は簡�
 アニメーションの定義名は半角英数字で自由に決めることが可能。
 animation-name につけた定義名に対し、keyframes でアニメーションの開始から終了までの変化を指定。
 
-```css
+```
 @keyframes fadeInAnime {
   0% {
     /*ここに開始のCSSを記述*/
@@ -1884,9 +1865,7 @@ alternate-reverse→ 毎回逆方向の再生、奇数回では逆方向、偶�
 
 ![](https://www.autumn-group.com/wp-content/uploads/2023/10/f24c74ff4800-20220310.gif)
 
-:::details html ファイル
-
-```html:index.html
+```
 <!DOCTYPE html>
 <html lang="en">
 
@@ -1906,15 +1885,11 @@ alternate-reverse→ 毎回逆方向の再生、奇数回では逆方向、偶�
 </html>
 ```
 
-:::
-
 #### 【CSS_13-2】 以下のツールチップを実装してください。
 
 ![](https://www.autumn-group.com/wp-content/uploads/2023/10/3a51077e49b2-20220310.gif)
 
-:::details html ファイル
-
-```html:index.html
+```
 <!DOCTYPE html>
 <html lang="en">
 
@@ -1935,16 +1910,12 @@ alternate-reverse→ 毎回逆方向の再生、奇数回では逆方向、偶�
 </html>
 ```
 
-:::
-
 #### 【CSS_13-3】 以下のアニメーションを実装してください。
 
 ※一定時間で色が変化していくアニメーションです。
 ![](https://www.autumn-group.com/wp-content/uploads/2023/10/993798acb3d7-20220310.gif)
 
-:::details html ファイル
-
-```html:index.html
+```
 <!DOCTYPE html>
 <html lang="en">
 
@@ -1964,15 +1935,11 @@ alternate-reverse→ 毎回逆方向の再生、奇数回では逆方向、偶�
 </html>
 ```
 
-:::
-
 #### 【CSS_13-4】 以下の SNS アイコンを実装してください。
 
 ![](https://www.autumn-group.com/wp-content/uploads/2023/10/daedd5d53c20-20220310-1.gif)
 
-:::details html ファイル
-
-```html:index.html
+```
 <!DOCTYPE html>
 <html lang="en">
 
@@ -2008,8 +1975,6 @@ alternate-reverse→ 毎回逆方向の再生、奇数回では逆方向、偶�
 
 </html>
 ```
-
-:::
 
 以上で JavaScript(CSS アニメーション含む)のセクションは終了です！
 お疲れ様でした！

@@ -18,7 +18,7 @@ TypeScript はマイクロソフトによって開発され、メンテナンス
 
 #### number で定義しているものに string 型のものを入れてしまった場合
 
-```typescript
+```
 let num: number = 1;
 let num: number = "hoge"; // エラー: `string` を `number` に代入できません
 ```
@@ -44,7 +44,7 @@ C#や Java といった言語も Generics を搭載しており、TypeScript に
 
 下記のように同じようなコードを別の型で繰り返す場合があるとします。
 
-```Typescript
+```
 // number型
 function test(arg: number): number {
   return arg;
@@ -62,7 +62,7 @@ test2("文字列"); //=> 文字列
 これを Generics を使用する事で下記のように書く事が可能です。
 test の引数は string 型だけ、また test の引数は number 型だけが許されるようになります。
 
-```typescript
+```
 function test(arg: T): T {
   return arg;
 }
@@ -77,7 +77,7 @@ test("文字列２"); //=> "文字列２"
 複数の型引数を使用することも可能です。
 型引数の名前に特に決まりはありませんが、慣習的に T,U 等の大文字のアルファベットが使用される事が多いです。
 
-```typescript
+```
 function test(arg1: T, arg2: U, arg3: P): P {
   return arg3;
 }
@@ -88,7 +88,7 @@ test("文字列", true, 4); //=> 4
 Generic 関数の様に型引数を渡す事で、クラスもジェネリック化する事が可能です。
 型引数 T はメソッドの返り値の型や、引数の型として、クラスを通して使用されている事が見てとれます。
 
-```typescript
+```
 class Klass {
   item: T;
   constructor(item: T) {
@@ -108,7 +108,7 @@ numObj.getItem(); //=> 5
 
 こちらも上記の Generic 関数・クラスと同じ要領で Generic インターフェイスを作成する事が可能です。
 
-```typescript
+```
 interface KeyValue {
   key: T;
   value: U;
@@ -123,7 +123,7 @@ let obj: KeyValue = { key: "文字列", value: 2 }; //= {key: "文字列", value
 
 例えば下記の例では arg の name というプロパティを取得しようとしていますが、全ての型が name を持つ訳ではないので、コンパイラが警告を出しています。
 
-```typescript
+```
 function getName(arg: T): string {
   return arg.name; // Property 'name' does not exist on type 'T'.
 }
@@ -134,7 +134,7 @@ function getName(arg: T): string {
 これにより、実装時にコンパイラエラーも起こりません。
 また、関数を呼び出す際に制約に違反する引数を渡した場合にはエラーを出してくれます。
 
-```typescript
+```
 interface argTypes {
   name: string;
 }
@@ -149,7 +149,7 @@ getName({ name: "鈴木一郎" });
 
 JavaScript プリミティブ型は、TypeScript の型システムでカバーしています。これは、以下に示すように `string`、`number`、 `boolean`を意味します。
 
-```typescript
+```
 var num: number;
 var str: string;
 var bool: boolean;
@@ -183,7 +183,7 @@ boolArray = [true, "false"]; // Error
 
 この関数に正しく型アノテーションを付けてください。型アノテーションとは、引数や返り値の型をソースコード中に明示することです。
 
-```typescript
+```
 function isPositive(num) {
   return num >= 0;
 }
@@ -210,7 +210,7 @@ any 型は、TypeScript 型システムにおいて特別なものです。
 any は型システムのすべての型と互換性があります。つまり、any 型の変数には何でも代入できるし、その変数を
 何にでも代入できるということです。
 
-```typescript
+```
 let hoge: any;
 
 hoge = 'name'
@@ -231,7 +231,7 @@ str = undefined;
 
 union 型は、プロパティを複数の型を定義して、そのどれかに当てはまると使用可能にできるものです。
 
-```typescript
+```
 type strOrNum = String | Number;
 
 strOrNum = "hoge";
@@ -243,7 +243,7 @@ strOrNum = true; // Error
 
 void は関数に戻り値がない時に使います。
 
-```typescript
+```
 function log(message): void {
   console.log(message);
 }
@@ -253,7 +253,7 @@ function log(message): void {
 
 一度作成した型を引用して使うことができます。
 
-```typescript
+```
 type Mojiretsu = string;
 
 const fooString: string = "Hello";
@@ -282,7 +282,7 @@ type Profile2 = typeof example1;
 
 インターフェースは、複数の型アノテーションを単一の名前付きアノテーションに合成するための、TypeScript における主要な方法です。次の例を考えてみましょう。
 
-```typescript
+```
 interface Name {
   first: string;
   second: string;
@@ -309,7 +309,7 @@ name = {
 
 #### 【TS_2-1】 1 人のユーザーのデータを表すオブジェクトは、name プロパティと age プロパティ、そして private プロパティを持っています。name は文字列、age は数値、private は真偽値です。ユーザーデータのオブジェクトの型 User を定義してください。
 
-```typescript
+```
 function showUserInfo(user: User) {
   // 省略
 }
@@ -334,7 +334,7 @@ const usr: User = {
 
 #### 【TS_2-2】 以下の Person インターフェースの age プロパティはオプショナルにし、age プロパティの値を省略して下さい。
 
-```typescript
+```
 interface Person {
   name: string;
   age: number;
@@ -356,7 +356,7 @@ let obj: Foo = { name: "kenji", age: 90 };
 
 #### 【TS_2-3】 以下のコードで定義される関数 sumOfPos は、数値の配列を受け取って、そのうち 0 以上の値の和を返す関数です。適切な型アノテーションをつけてください。
 
-```typescript
+```
 function sumOfPos(arr) {
   return arr.filter((num) => num >= 0).reduce((acc, num) => acc + num, 0);
 }
@@ -383,7 +383,7 @@ JavaScript では、関数は第一級のオブジェクトであり、他のオ
 
 - 引数と return で返される値に型定義する
 
-```typescript
+```
 function bmi(height: number, weight: number): number {
   // function 関数名(引数名: 引数の型定義): returnで返される型定義
   return weight / (height * height);
@@ -394,7 +394,7 @@ function bmi(height: number, weight: number): number {
 
 - 関数が格納された変数自体にも型定義する
 
-```typescript
+```
 let bmi: (height: number, weight: number) => number = function (
   height: number,
   weight: number
@@ -407,7 +407,7 @@ let bmi: (height: number, weight: number) => number = function (
 
 上記のものをアロー関数で表す。
 
-```typescript
+```
 let bmi: (height: number, weight: number) => number = (
   height: number,
   weight: number
@@ -425,7 +425,7 @@ let bmi: (height: number, weight: number) => number = (
 - 変数名の末に?を付与する事でオプショナルなパラメータの型定義ができる
 - 下のコードの場合、第三引数に設定されたパラメーターはあってもなくてもエラーにはならない
 
-```typescript
+```
 let bmi: (height: number, weight: number, printable?: boolean) => number = (
   height: number,
   weight: number,
@@ -450,7 +450,7 @@ bmi(1.75, 70);
 
 #### 【TS_3-1】 以下のコードで定義される関数 isPositive は、数値を受け取ってその数値が 0 以上なら true を、0 未満なら false を返す関数です。以下のコードに合うように適切な型 IsPositiveFunc を定義してください。
 
-```typescript
+```
 const isPositive: IsPositiveFunc = (num) => num >= 0;
 
 // 使用例
@@ -463,7 +463,7 @@ const res: number = isPositive(123);
 
 #### 【TS_3-2】 以下のコードで定義される getSpeed は、'slow', 'medium', 'fast'のいずれかの文字列を受け取って数値を返す関数です。この関数に他の文字列を渡すのは型エラーとしたいです。この条件を満たすように型 Speed を定義してください。
 
-```typescript
+```
 type Speed = /* ここを入力 */;
 
 function getSpeed(speed: Speed): number {
@@ -491,7 +491,7 @@ getSpeed("veryfast");
 - myFilter 関数に適切な型アノテーションを付けてください。
 - myFilter 関数は色々な型の配列を受け取れる点に注意してください。必要に応じて myFilter に型引数を追加しても構いません。
 
-```typescript
+```
 function myFilter(arr, predicate) {
   const result = [];
   for (const elm of arr) {
@@ -520,7 +520,7 @@ myFilter([1, 2, 3, 4, 5], (str) => str.length >= 4);
 - constructor(関数)の引数にも型宣言
 - constructor(関数)の戻り値の型宣言は行わない(TypeScript の言語仕様)
 
-```TypeScript
+```
 class Person {
   // クラスの型宣言
   name: string
@@ -546,7 +546,7 @@ console.log(taro.profile())  // name: Taro age: 30
 - private：クラス内部からのみアクセスできる
 - protected：クラスを継承した小クラスからでもアクセスできる
 
-```TypeScript
+```
 class Person {
   // publicはアクセスの制約がない。省略できる。
   public name: string
@@ -576,7 +576,7 @@ console.log(taro.profile())  // privateのageを含むメソッドなのでエ�
 
 Person クラスを継承した Android クラスを作成してみる
 
-```TypeScript
+```
 class Android extends Person {
   constructor(name: string, age: number, nationality: string) {
     // 親クラスのconstructorメソッドを継承
@@ -598,7 +598,7 @@ class Android extends Person {
 
 以下 sample① と sample② は同じ結果になる
 
-```TypeScript
+```
 //sample①
 class Person {
   constructor(public name: string, protected age: number) {}
@@ -627,7 +627,7 @@ console.log(me)  // Person { name: 'foo', age: 30 }
 - 継承は extends を使用する
 - 派生クラスの constructor には super の呼び出しが必要
 
-```TypeScript
+```
 class Animal {
   constructor(public name: string) {}
 
@@ -660,7 +660,7 @@ console.log(new Lion('Simba', 80).run()) // I can run 80km/h.
 - 抽象メソッドは必ずオーバーライドをする必要がある
 - 抽象メソッドの宣言はシグネチャーと言う
 
-```TypeScript
+```
 // 抽象メソッドは抽象クラスの中でしか使えない
 abstract class Animal {
   abstract cry(): string
@@ -706,7 +706,7 @@ class Tiger extends Animal {}
 - set は値を設定するときのみ実行される private に設定された変数はアクセス(書き換えも)できないが、
   アクセスだけしたい時(get)、値だけ書き換えたい時(set)に便利。
 
-```TypeScript
+```
 // * owner
 //   * 所有者
 //   * 初期化時に設定できる
@@ -754,7 +754,7 @@ console.log(card.debugPrint())  // secretNumber: 1234567890
 変数には const がありましたが、プロパティにも readonly があります。readonly を付与したプロパティは、
 プロパティ定義時および、コンストラクタの中身でのみ書き換えることができます。
 
-```TypeScript
+```
 class VisaCard {
   constructor(public readonly owner: string) {
     this.owner = owner
@@ -778,7 +778,7 @@ myVisaCard.owner = 'buzz'  // コンパイルエラー
 3.private 変数 fruitsname に値を設定する setter の定義
 以上を満たす class Fruits を実装し、以下のようにインスタンスを作成後、
 
-```TypeScript
+```
 let (命名何でも可) = new Fruits("ぶどう");
 ```
 

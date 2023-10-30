@@ -80,7 +80,7 @@ react-curriculum
 
 そして index.js の新しいファイルに以下を記述します。
 
-```javascript:index.js
+```
 import ReactDOM from "react-dom";
 
 const App = () => {
@@ -92,7 +92,7 @@ ReactDOM.render(<App/>,document.getElementById('root'));
 
 再度ブラウザで確認すると Hello World が出力されました！ おめでとうございます！ 先程のコードについて一つずつみていきましょう。
 
-```javascript
+```
 import ReactDOM from "react-dom";
 ```
 
@@ -102,7 +102,7 @@ render する index.js 内でまず初めにインポートしてください。
 
 次に下記の部分についてみていきましょう。
 
-```javascript
+```
 const App = () => {
   return <h1>Hello World!!</h1>;
 };
@@ -124,7 +124,7 @@ public フォルダの index.html を確認すると、この id を持つ要素
 確認してみましょう。
 複数行を返す場合
 
-```javascript:index.js
+```
 import ReactDOM from "react-dom";
 
 const App = () => {
@@ -162,7 +162,7 @@ ReactDOM.render(,document.getElementById('root'));
 下記コードをみてください。
 実装結果については先ほどと変わりませんが、書き方が変わっています。
 
-```javascript:index.js
+```
 import ReactDOM from "react-dom";
 
 const App = () => {
@@ -224,7 +224,7 @@ react-curriculum
 
 以下ファイルの中身を見ていきますが、ファイルがどう render されているかを見るためなので細かい内容については省略しています。
 
-```javascript:index.js
+```
 import ReactDOM from 'react-dom';
 import App from './App';
 
@@ -238,7 +238,7 @@ App という名前のコンポーネントをパスからインポートする�
 
 そして html の root 部分で App コンポーネントを render しています。次に App.js を見ていきましょう。
 
-```javascript:App.js
+```
 import React from "react";
 import './App.css';
 import TodoList from './components/TodoList';
@@ -269,7 +269,7 @@ export default App;
 
 これで TodoList コンポーネントをインポートした App コンポーネントを index.js に受け渡すことができました。
 
-```javascript:TodoList.js
+```
 import React from 'react';
 import TodoForm from "./TodoForm";
 import Todo from "./Todo";
@@ -289,7 +289,7 @@ const TodoList = () => {
 export default TodoList;
 ```
 
-```javascript:TodoForm.js
+```
 import React from 'react';
 
 const TodoForm = (props) => {
@@ -346,7 +346,7 @@ React において CSS の書き方はいろいろあります。
 
 直接記述する例：
 
-```javascript
+```
 return (
     <div style={{width: "100%", padding: "16px"}}>
       <p style={{color "blue", textAlign "center"}}>Hello World!!</p>
@@ -358,14 +358,14 @@ return (
 //プロパティは""で囲み、text-align などはハイフンなしのキャメルケースになるところも注意が必要です。
 styled components の例：
 
-```javascript
+```
 import styled from "styled-components";
 ```
 
 //スタイルを適用したコンポーネントを定義するという考え方です。
 //下記の例：任意の変数を定義し、styled.[作りたい要素]`CSS`;とする。
 
-```javascript
+```
 const StyledDiv = styled.div`
   padding: "8px";
 `;
@@ -405,7 +405,7 @@ https://tailwindcomponents.com/components
 
 例:
 
-```javascript
+```
 //TailwindCss
 
 import React from "react";
@@ -440,7 +440,7 @@ Props はコンポーネントに渡す引数のようなもので、コンポ�
 
 例を見ていきましょう。まずは下のコードを見てください。
 
-```javascript:components/Article.js
+```
 import React from "react";
 
 const Article = () => {
@@ -464,7 +464,7 @@ Article というコンポーネントを作りました。
 では先ほどのコードを props を使って使いまわせるように編集していきましょう。
 まずは親コンポーネントの App.js を見ていきましょう。
 
-```javascript:App.js
+```
 import React from "react";
 import Article from "./Article";
 
@@ -481,7 +481,7 @@ export default App;
 
 次に受け取る側、子コンポーネントの中身を確認します。
 
-```javascript:components/Article.js
+```
 import React from "react";
 
 const Article = (props) => {
@@ -559,32 +559,32 @@ props に続いて重要になる概念が State です。その名の通りコ�
 useState は React Hooks という機能群の中の useState という関数を用いて State を扱っていきます。
 React の中に用意されているので、使用する場合は以下のようにインポートすることが必要です。
 
-```javascript
+```
 import { useState } from "react";
 ```
 
 使い方を見ていきます。
 
-```javascript
+```
 const [現在の状態, 値を更新する関数] = useState(初期値);
 ```
 
 これが基本になります。 ではまずは数字を更新するものを見ていきます。
 useState で数字の管理
 
-```javascript
+```
 const [num, setNum] = useState(0);
 ```
 
 こんな感じですね。 上記の例では、[現在の数字,その数字を更新する関数]=初期値０と設定しています。 絶対にこの書き方にしないといけないわけではありませんが、暗黙の了解で
 
-```javascript
+```
 const [〇〇, set〇〇] = useState();
 ```
 
 というように、更新関数には set ＋現在の状態とつけるような形で名前をつけます。 では使い方を見ていきます。
 
-```javascript
+```
 import { useState } from "react";
 import React from "react";
 
@@ -615,7 +615,7 @@ export const App = () => {
 
 また、値の更新について以下の疑問を持った方もいるかもしれません。
 
-```javascript
+```
 setNum((prevState) => prevState + 1); //この部分について
 setNum(num + 1); //これじゃいけないの？
 ```
@@ -636,7 +636,7 @@ setNum(num + 1); //これじゃいけないの？
 **ON/OFF を切り替えるボタン**
 ボタンをセットし、現在の自分の状態が on であれば off に、off であれば on に切り替える処理にします。 お察しの通り true と false を使って状態を変更します。
 
-```javascript:ToggleButton.js
+```
 
 import { useState } from "react";
 import React from "react";
@@ -725,13 +725,13 @@ console.log で何か出力してみてください。
 
 useEffect とは useState と同じように React Hooks の機能群の１つです。useState と同様に React から import します。
 
-```javascript
+```
 import { useEffect } from "react";
 ```
 
 使う場合は以下の構文で使用します。
 
-```javascript
+```
 useEffect(実行する関数, [依存する値]);
 ```
 
@@ -741,7 +741,7 @@ useEffect(実行する関数, [依存する値]);
 
 例を見てみましょう。
 
-```javascript
+```
 export const App = () => {
   useEffect(() => {
     alert();
@@ -762,7 +762,7 @@ num という State の値が変わった時のみにアラートを表示した
 説明だけだとわかりにくいと思うので、実際に以下のコードを書いてみてください。
 前回の復習も兼ねて useState も使います。
 
-```javascript:App.js
+```
 export const App = () => {
 
 const [num, setNum] = useState(0);
@@ -883,7 +883,7 @@ src の中に providers というフォルダを作り、その中に js ファ�
 
 React の中に createContext という関数が用意されているので、それを使って Context の器を作成します。
 
-```javascript:SampleProvider.js
+```
 
 import { createContext } from "react";
 
@@ -901,7 +901,7 @@ Context を参照する側のコンポーネントで使用するため export �
 
 Context の値を参照できるようにするためには、Provider で Context の値を参照したいコンポーネント群を囲む必要があります。
 
-```javascript:SampleProvider.js
+```
 import { createContext } from "react";
 export const SampleContext = createContext({});
 
@@ -933,7 +933,7 @@ Provider コンポーネントはなんでも囲めるように Props として 
 次回課題で使う時のために、index.js は同じものを下にコピペして一旦退避させ、もとのコードはコメントアウトしてください。
 複製した方に書いていきましょう。
 
-```javascript:index.js
+```
 import ReactDOM from "react-dom";
 import App from "./App.js";
 import './index.css';
@@ -958,7 +958,7 @@ App を囲んだので、App コンポーネントの中の全ての子コンポ
 
 前回の useEffect の課題のファイルで確認します。
 
-```javascript:
+```
 //useEffectComponentsの任意のjsファイル
 
 //"react"からuseContextをimport
@@ -989,7 +989,7 @@ useContext で取得した値に Context で設定したオブジェクトが入
 では以前やったようにボタンを on と off で変更できるようにするプログラムにを例にします。
 true と false のステートを管理するものです。
 
-```javascript:SampleProvider.js
+```
 const sampleObj = { sampleValue: "test" }//削除
 const [isOpen, setIsOpen] = useState(false);//追加 ステートを定義
 
@@ -1002,7 +1002,7 @@ return (
 
 useState 使ってるので react から import するのも忘れないでくださいね〜
 
-```javascript:
+```
 //useEffectComponentsの任意のjsファイル
 
 import { useContext } from 'react';
