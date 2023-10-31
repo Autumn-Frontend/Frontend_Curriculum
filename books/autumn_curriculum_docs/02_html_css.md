@@ -108,7 +108,7 @@ http://www.johoka.net/kihontag.htm
 
 ・開始タグと終了タグで囲う（一部例外あり）
 
-```html
+```
 <h1>大見出し</h1>
 ```
 
@@ -117,7 +117,7 @@ http://www.johoka.net/kihontag.htm
 終了タグを持たない要素もあります。この要素のことを「空要素（からようそ）」と呼びます。
 代表的な空要素には、以下のようなものがあります。
 
-```html
+```
 <img src="”aaa.jpg”" />：画像を表示する <br />：改行
 ```
 
@@ -130,21 +130,21 @@ http://www.johoka.net/kihontag.htm
 **href 属性**
 ボタンを押したときに外部のページや内部の別のページなどに遷移することができます。
 
-```html
+```
 <a href="https://www.google.co.jp/">Google Japanのリンク</a>
 ```
 
 **src 属性**
 
 タグで表示させたい画像の場所を指定し、表示させます。
-```html
+```
 <img src="sample.png">
 ```
 
 **alt 属性**
 
 タグでうまく表示されなかったときの代替のテキストを表示させます。
-```html
+```
 <img src="sample.png" alt="サンプル画像">
 ```
 
@@ -156,7 +156,7 @@ http://www.johoka.net/kihontag.htm
 都度、下記サイトを参考に、適切なタグを選択しましょう。
 https://webliker.info/46840/
 
-```html
+```
 <div>
     <h1>OK 入れ子ルール</h1>
 </div>
@@ -174,14 +174,14 @@ HTML の構造を理解しましょう。
 **html 要素**
 html 要素は、この文書が HTML の文書であることを表します。
 
-```html
+```
 <!DOCTYPE html>
 ```
 
 HTML にはいくつかのバージョンがあります。この HTML ファイルがどのバージョンの HTML で書かれているかを宣言しています（DOCTYPE 宣言）。HTML のバージョンによって記述方法が異なります。
 現行のバージョンは「HTML5」で、特に指定をしなければ、現行のバージョンが利用されます。
 
-```html
+```
 <html lang="en">
   　　〜　　
 </html>
@@ -196,7 +196,7 @@ HTML の文章であることを示しています。
 通常は「ja」に変えるようにしましょう。
 **head 要素**
 
-```html
+```
 <meta charset="UTF-8" />
 ```
 
@@ -207,7 +207,7 @@ meta 要素は、ページの情報を定義する要素です。「UTF-8」は�
 
 ![](https://www.autumn-group.com/wp-content/uploads/2023/10/11_52ba1bbf6b26-20220308.png)
 
-```html
+```
 <title>Document</title>
 ```
 
@@ -216,7 +216,7 @@ meta 要素は、ページの情報を定義する要素です。「UTF-8」は�
 
 **body 要素**
 
-```html
+```
 <body>
   〜
 </body>
@@ -236,7 +236,7 @@ meta 要素は、ページの情報を定義する要素です。「UTF-8」は�
 
 ③index.html ファイルを下記のように記載し、CSS ファイルを読み込ませる。
 
-```html
+```
 <!DOCTYPE html>
 <html lang="ja">
   <head>
@@ -256,7 +256,7 @@ meta 要素は、ページの情報を定義する要素です。「UTF-8」は�
 
 ④body に下記を追加
 
-```html
+```
 <body>
   <p>クラスなし</p>
   <p class="test">クラスあり</p>
@@ -269,7 +269,7 @@ meta 要素は、ページの情報を定義する要素です。「UTF-8」は�
 
 ⑥style.css で下記のように記載
 
-```html
+```
 p{ color: red; }
 ```
 
@@ -280,7 +280,7 @@ p{ color: red; }
 
 ⑧style.css で下記のように記載![](https://www.autumn-group.com/wp-content/uploads/2023/10/15_0f0700c6b05b-20220308.png)
 
-```html
+```
 p { color: red; } .test { color: blue; } #sample { color: green; }
 ```
 
@@ -295,7 +295,7 @@ CSS を読み込む方法は色々あります。
 
 ①HTML ファイルから外部 CSS を読み込む
 
-```html
+```
 <head>
   <link rel="stylesheet" href="ファイル名" />
 </head>
@@ -303,13 +303,13 @@ CSS を読み込む方法は色々あります。
 
 ② タグの style 属性を使い書く
 
-```html
+```
 <p style="color: red;">クラスなし</p>
 ```
 
 ③HTML ファイルに<style>を用いて書く
 
-```html
+```
 <body>
   <p>クラスなし</p>
 
@@ -343,14 +343,14 @@ href 属性は外部ファイルなどを参照するのに、URL/URI やパス�
 一般的な CSS の見込み方です。
 CSS を読み込ませるので、rel の属性値は「stylesheet」になります。
 
-```html
+```
 <link rel="stylesheet" href="style.css" />
 ```
 
 ②web 上で公開されているスタイルシートを読み込む
 「ress」という、ネット上に公開されている CSS のコードを読み込んでりようすることもできます。
 
-```html
+```
 <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
 ```
 
@@ -359,7 +359,7 @@ CSS を読み込ませるので、rel の属性値は「stylesheet」になり�
 ③web サイトのアイコンを指定
 web ブラウザの上に表示されるアイコンも設定可能です。
 
-```html
+```
 <link rel="icon" href="autumn_logo.jpg" />
 ```
 
@@ -411,7 +411,7 @@ https://github.com/Autumn-Frontend/curriculumn
 ◆sample/lesson01
 CSS のスタイルの当て方は下記のように書きます。<p>タグの色を赤色にするという書き方です
 
-```html
+```
 p{ color:red; } どこの（セレクタ）{ なにを（プロパティ）：どうする（値）; }
 ```
 
@@ -426,7 +426,7 @@ p{ color:red; } どこの（セレクタ）{ なにを（プロパティ）：�
 
 html
 
-```html
+```
 <p>タグ</p>
 <p>タグ</p>
 <p>タグ</p>
@@ -435,7 +435,7 @@ html
 
 css
 
-```css
+```
 p {
   color: red;
 }
@@ -449,13 +449,13 @@ p {
 
 html
 
-```html
+```
 <p id="id">タグ</p>
 ```
 
 css
 
-```css
+```
 #id {
   color: blue;
 }
@@ -463,13 +463,13 @@ css
 
 #### CLASS の場合
 
-```html
+```
 <p class="class">タグ</p>
 ```
 
 css
 
-```css
+```
 #id {
   color: green;
 }
@@ -484,7 +484,7 @@ css
 同じ Web ページ内で同じ CLASS 属性の値を何度でも用いることができる
 下記の記載ができる。
 
-```html
+```
 <p class="class">タグ</p>
 <p class="class">タグ</p>
 ```
@@ -492,14 +492,14 @@ css
 ID の場合
 同じ Web ページ内で同じ ID 属性の値は一度しか使えない。下記の記載ができない。
 
-```html
+```
 <p id="id">タグ</p>
 <p id="id">タグ</p>
 ```
 
 ID を使う場面としては下記のような状態です。生徒という括り（CLASS）があって、生徒の中でも学籍番号（ID）で区別したい場合など
 
-```html
+```
 <p class="students" id="01">生徒01</p>
 <p class="students" id="02">生徒02</p>
 <p class="students" id="03">生徒03</p>
@@ -513,13 +513,13 @@ CSS は上から順に読み込み、重複されたものは上書きされる�
 text1 に対し、color の指定を 2 回を行っています。CSS は上から順に読み込んでいるので、最後に記載したものが、最終的に適用されます。
 html
 
-```html
+```
 <p class="text1">color</p>
 ```
 
 css
 
-```css
+```
 .text1{
     color:red;
     color:blue; # こちらが適応される
@@ -535,13 +535,13 @@ CSS は上から順に読み込みますが、強制的に優先順位を変更�
 ただし、このやり方に関しては、運用保守性の観点から、使い方によっては好まれない傾向がありますので、よっぽどのことが無い限り、使わないようにしましょう。
 html
 
-```html
+```
 <p class="text2">color</p>
 ```
 
 css
 
-```css
+```
 .text2{
     color:red !important; # こちらが適応される
     color:blue;
@@ -557,7 +557,7 @@ lesson01 をブラウザで表示すると、style.css に指定していない�
 こちらは、<head>タグ内に「base.css」を「style.css」の前に読み込んでいます。この base.css に background-color の指定があるので、背景色を変更しています。
 html
 
-```html
+```
 <head>
   <link rel="stylesheet" href="../../base.css" />
   <link rel="stylesheet" href="style.css" />
@@ -566,7 +566,7 @@ html
 
 css
 
-```css
+```
 body {
   background-color: antiquewhite;
 }
@@ -580,7 +580,7 @@ body {
 `「ctrl」+「/」`
 ↓ コメントアウトされる。複数行でも可能。
 
-```css
+```
 body {
   /* background-color: antiquewhite; */
 }
@@ -600,7 +600,7 @@ body {
 
 まず下記のように<div>タグを記載しましょう。
 
-```html
+```
 <body>
   <div class="box1"></div>
 </body>
@@ -613,7 +613,7 @@ width と height を指定しよう
 width は、横幅を設定します。height は、高さを設定します。
 まずは下記を記載しましょう。
 
-```html
+```
 .box { height: 200px; width: 100px; }
 ```
 
@@ -629,7 +629,7 @@ width は、横幅を設定します。height は、高さを設定します。
 background-color を指定して見えるようにしましょう。
 下記を記載してから、Web ブラウザで表示させてみよう。
 
-```html
+```
 .box { height: 200px; width: 100px; background-color: lightgoldenrodyellow; }
 ```
 
@@ -657,7 +657,7 @@ https://www.colordic.org/
 
 html
 
-```html
+```
 <div class="box2">
   <div class="box3"></div>
 </div>
@@ -665,7 +665,7 @@ html
 
 css
 
-```css
+```
 .box2 {
   width: 50%;
   height: 200px;
@@ -687,13 +687,13 @@ css
 
 html
 
-```html
+```
 <div class="box4"></div>
 ```
 
 css
 
-```css
+```
 .box4 {
   width: 40vw;
   height: 20vw;
@@ -707,13 +707,13 @@ css
 基準としては、100vh が 100%相当、10vh が 10%相当
 html
 
-```html
+```
 <div class="box5"></div>
 ```
 
 css
 
-```css
+```
 .box5 {
   width: 40vh;
   height: 20vh;
@@ -726,13 +726,13 @@ width を指定しない場合、デフォルト値として width:auto;が適�
 auto は親要素（今回は<body>タグ）の横幅分広がります。
 html
 
-```html
+```
 <div class="box6"></div>
 ```
 
 css
 
-```css
+```
 .box5 {
   /* width: auto; // デフォルト値 */
   height: 100px;
@@ -746,7 +746,7 @@ css
 
 ①<div>タグの中に<div>タグを記載します。
 
-```html
+```
 <div class="box1">
   <div class="box2"></div>
 </div>
@@ -754,7 +754,7 @@ css
 
 ② スタイルを当てます
 
-```css
+```
 .box1 {
   width: 200px;
   height: 200px;
@@ -794,7 +794,7 @@ box1に適用しているCSSの値とボックスモデルが確認できます�
 
 ボックスモデルの解説
 
-```css
+```
 .box1 {
   background-color: orange;
   width: 200px;
@@ -824,13 +824,13 @@ border は、要素に枠線を指定するプロパティです。
 border: 5px（線の太さ） solid（線の種類） cornflowerblue（線の色）;で指定する
 html
 
-```html
+```
 <div class="box1"></div>
 ```
 
 css
 
-```css
+```
 .box1 {
   width: 200px;
   height: 200px;
@@ -845,13 +845,13 @@ css
 
 html
 
-```html
+```
 <div class="box2"></div>
 ```
 
 css
 
-```css
+```
 .box1 {
   width: 200px;
   height: 200px;
@@ -872,7 +872,7 @@ css
 margin は要素の外側の余白になります。
 html
 
-```html
+```
 <div class="box1">
   <p>contents</p>
 </div>
@@ -880,7 +880,7 @@ html
 
 css
 
-```css
+```
 .box1 {
   width: 100px;
   height: 100px;
@@ -902,7 +902,7 @@ box1 と box2 で同じ高さと横幅で設定していますが、padding の�
 
 html
 
-```html
+```
 <div class="box2">
   <p>contents</p>
 </div>
@@ -910,7 +910,7 @@ html
 
 css
 
-```css
+```
 .box2 {
   width: 100px;
   height: 100px;
@@ -926,7 +926,7 @@ web
 
 位置を指定する
 
-```css
+```
 margin-top: 1px;
 margin-right: 1px;
 padding-bottom: 1px;
@@ -935,7 +935,7 @@ padding-left: 1px;
 
 まとめて指定する
 
-```css
+```
 margin: 1px; /* 値が1つの場合、上下左右に適応*/
 margin: 1px 2px; /* 値が2つの場合、左が上下、右が左右*/
 padding: 1px 2px 3px; /* 値が3つの場合、上 左右 下*/
@@ -964,7 +964,7 @@ sample/lesson を開き、box-sizing 以外のプロパティ値を一緒にし�
 
 html
 
-```html
+```
 <div class="content-box">
   <p>content-box</p>
 </div>
@@ -972,7 +972,7 @@ html
 
 css
 
-```css
+```
 .content-box {
   width: 200px;
   height: 200px;
@@ -991,7 +991,7 @@ web
 
 html
 
-```html
+```
 <div class="border-box">
   <p>border-box</p>
 </div>
@@ -999,7 +999,7 @@ html
 
 css
 
-```css
+```
 .content-box {
   width: 200px;
   height: 200px;
@@ -1047,7 +1047,7 @@ padding と border の分だけ、コンテンツ（要素）の横幅や高さ�
 mac 　`「command」+ 「/」`
 windows 　`「ctrl」+「/」`
 
-```html
+```
 <hrad>
 <meta charset="UTF-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -1109,13 +1109,13 @@ before は要素の直前に、after は要素の直後に要素を加えるこ�
 
 html
 
-```html
+```
 <p class="text">擬似要素</p>
 ```
 
 css
 
-```css
+```
 .text {
   color: red;
 }
@@ -1151,7 +1151,7 @@ https://developer.mozilla.org/ja/docs/Web/CSS/Pseudo-classes
 
 html
 
-```html
+```
 <p>p1</p>
 <p>p2</p>
 <p>p3</p>
@@ -1162,7 +1162,7 @@ html
 
 css
 
-```css
+```
 p:nth-child(3) {
   color: red;
 }
@@ -1171,7 +1171,7 @@ p:nth-child(3) {
 奇数（odd）、偶数（even）のみ指定
 css
 
-```css
+```
 p:nth-child(odd) {
   background-color: beige;
 }
@@ -1189,7 +1189,7 @@ n+● とすることで何番目以降の要素に対してスタイルを適�
 
 css
 
-```css
+```
 p:nth-child(n + 2) {
   margin-top: 30px;
 }
@@ -1204,13 +1204,13 @@ web
 
 html
 
-```html
+```
 <div class="box"></div>
 ```
 
 css
 
-```css
+```
 .box {
   height: 100px;
   width: 100px;
@@ -1243,7 +1243,7 @@ position プロパティを利用して、要素の位置をずらすことが�
 
 html
 
-```html
+```
 <div class="box1">
     <dov class="box2"</div>
 </div>
@@ -1252,7 +1252,7 @@ html
 css
 位置の指定ができない
 
-```css
+```
 .box1 {
   background-color: darksalmon;
   width: 200px;
@@ -1282,7 +1282,7 @@ web
 
 css
 
-```css
+```
 .box1 {
   background-color: darksalmon;
   width: 200px;
@@ -1309,7 +1309,7 @@ web
 親要素が relative の場合
 css
 
-```css
+```
 .box1 {
   background-color: darksalmon;
   width: 200px;
@@ -1335,7 +1335,7 @@ web
 
 css
 
-```css
+```
 .box1 {
   background-color: darksalmon;
   width: 200px;
@@ -1371,7 +1371,7 @@ float なしの状態
 
 html
 
-```html
+```
 <div class="box1">
   <div class="box2">
     <div class="box3"></div>
@@ -1381,7 +1381,7 @@ html
 
 css
 
-```css
+```
 .box1 {
   background-color: azure;
   width: 100px;
@@ -1411,7 +1411,7 @@ box1 のみ float を入れます。そうすると、box2 の上に box1 が表
 
 css
 
-```css
+```
 .box1 {
   background-color: azure;
   width: 100px;
@@ -1443,7 +1443,7 @@ float で配置場所を変える
 
 css
 
-```css
+```
 .box1 {
   background-color: azure;
   width: 100px;
@@ -1474,7 +1474,7 @@ web
 
 css
 
-```css
+```
 .box1 {
   background-color: azure;
   width: 100px;
@@ -1515,7 +1515,7 @@ box1〜3 が float で浮いているので、box4 が隠れてしまします�
 
 html
 
-```html
+```
 <!-- １段目 -->
 <div class="box1"></div>
 <div class="box2"></div>
@@ -1526,7 +1526,7 @@ html
 
 css
 
-```css
+```
 .box1 {
   background-color: azure;
   width: 100px;
@@ -1564,7 +1564,7 @@ float させた要素の親要素に、clearfix 用の CSS を設定します。
 wrap の中に box1〜3 を入れます。
 html
 
-```html
+```
 <div class="wrap">
   <div class="box1"></div>
   <div class="box2"></div>
@@ -1575,7 +1575,7 @@ html
 css
 wrap に擬似要素（after）を用いて、下側に回り込まないようにします。
 
-```css
+```
 .wrap::after {
   display: block;
   clear: both;
@@ -1618,7 +1618,7 @@ web
 
 css
 
-```css
+```
 /* .wrap::after{
     diaplay: block;
     clear: both;
@@ -1654,7 +1654,7 @@ Flex コンテナーと呼ばれる親要素の中に、Flex アイテムと呼�
 
 html
 
-```html
+```
 <div class="flex">
   <div class="box">1</div>
   <div class="box">2</div>
@@ -1662,7 +1662,7 @@ html
 </div>
 ```
 
-```css
+```
 .flex {
   display: flex;
 }
