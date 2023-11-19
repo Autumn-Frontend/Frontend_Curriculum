@@ -1,7 +1,3 @@
----
-title: "HTML・CSSの事前知識"
----
-
 # 1.HTML・CSS 学習の概要を理解しよう
 
 Web ページの構造を作る HTML と、見た目を調整する CSS について学びます。
@@ -137,6 +133,7 @@ http://www.johoka.net/kihontag.htm
 **src 属性**
 
 タグで表示させたい画像の場所を指定し、表示させます。
+
 ```
 <img src="sample.png">
 ```
@@ -144,6 +141,7 @@ http://www.johoka.net/kihontag.htm
 **alt 属性**
 
 タグでうまく表示されなかったときの代替のテキストを表示させます。
+
 ```
 <img src="sample.png" alt="サンプル画像">
 ```
